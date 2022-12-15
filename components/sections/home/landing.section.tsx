@@ -1,15 +1,9 @@
 import ArrowDown from "components/icons/arrow-down";
 import LinkButton from "components/link-button";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef && videoRef.current) {
-      videoRef.current?.play();
-    }
-  }, [videoRef]);
 
   return (
     <div className="relative flex flex-col w-full min-h-screen justify-center items-center">
@@ -19,6 +13,8 @@ const Landing = () => {
           ref={videoRef}
           className="h-full w-full object-cover"
           loop
+          autoPlay
+          playsInline
           preload="metadata"
           muted
         >
