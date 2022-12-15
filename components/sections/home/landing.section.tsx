@@ -19,9 +19,11 @@ const Landing = () => {
           ref={videoRef}
           className="h-full w-full object-cover"
           loop
+          preload="auto"
+          autoPlay
           muted
         >
-          <source src="videos/landing.mp4" type="video/mp4" />
+          <source src="videos/landing.mp4#t=0.5" type="video/mp4" />
           Your browser does not support video
         </video>
       </div>

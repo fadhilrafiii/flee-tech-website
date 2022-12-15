@@ -9,7 +9,6 @@ export default function Home() {
         <title>Flee Tech</title>
         <meta name="description" content="Flee Tech | Create your own app" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" href="/images/video-callback.jpg" />
       </Head>
       <>
         <Landing />

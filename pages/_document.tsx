@@ -20,6 +20,7 @@ const MyDocument = () => {
           href="https://fonts.googleapis.com/css?family=Lora&display=swap"
           as="style"
         />
+        <link rel="preload" href="/images/video-callback.jpg" as="image" />
       </Head>
       <body>
         <Main />
