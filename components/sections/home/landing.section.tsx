@@ -18,14 +18,14 @@ const Landing = () => {
         </h1>
       </div>
       <div className="relative hidden md:flex flex-wrap z-10">
-        <div className="flex-grow p-10 blur-22-white-10 basis-1/3 min-w-[360px]  w-full">
+        <div className="flex-grow p-10 blur-22-white-10 basis-[40%] min-w-[360px] lg:min-w-[450px] w-full">
           <h3 className="text-white text-3xl mb-14">
             Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus ut
             morbi egestas.
           </h3>
           <LinkButton href="/">Lorem ipsum dolor</LinkButton>
         </div>
-        <div className="flex-grow flex basis-2/3 w-full">
+        <div className="flex-grow flex basis-[60%] w-full">
           <div className="flex flex-col">
             <div className="flex-grow p-5 blur-22-white-10 text-white text-2xl">
               Lorem ipsum dolor sit amet consectetur

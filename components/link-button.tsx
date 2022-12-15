@@ -15,7 +15,7 @@ const LinkButton = ({
   return (
     <Link href={href}>
       <div
-        className={`${className} flex mb-4 items-center justify-between max-w-[320px]`}
+        className={`${className} flex mb-4 items-center justify-between max-w-[320px] gap-2`}
       >
         <span className="font-bold text-white text-2xl">{children}</span>
         <span className="flex items-center">
