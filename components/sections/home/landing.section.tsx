@@ -1,11 +1,26 @@
 import ArrowDown from "components/icons/arrow-down";
 import LinkButton from "components/link-button";
+import { useEffect, useRef } from "react";
 
 const Landing = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef) {
+      videoRef.current?.play();
+    }
+  }, []);
+
   return (
     <div className="relative flex flex-col w-full min-h-screen justify-center items-center">
       <div className="h-100-parent">
-        <video className="h-full w-full object-cover" autoPlay loop muted>
+        <video
+          poster="/images/video-callback.jpg"
+          ref={videoRef}
+          className="h-full w-full object-cover"
+          loop
+          muted
+        >
           <source src="videos/landing.mp4" type="video/mp4" />
           Your browser does not support video
         </video>
