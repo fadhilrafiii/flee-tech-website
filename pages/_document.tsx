@@ -15,6 +15,11 @@ const MyDocument = () => {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com/" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora&display=swap"
+        />
+        <link rel="preload" href="/fonts/SF-Pro.ttf" />
         <link rel="preload" href="/images/video-callback.jpg" as="image" />
       </Head>
       <body>
