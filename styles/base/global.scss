@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .border-x-1-white-50 {
+    border-left: 1px solid rgba(255, 255, 255);
+    border-right: 1px solid rgba(255, 255, 255);
+  }
+
+  .border-y-1-white-50 {
+    border-top: 1px solid rgba(255, 255, 255);
+    border-bottom: 1px solid rgba(255, 255, 255);
+  }
+
+  .border-1-white-50 {
+    border: 1px solid rgba(255, 255, 255);
+  }
+
+  .blur-22-white-10 {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(22px);
+  }
+
+  .blur-5-white-10 {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+  }
+
+  .h-100-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  .inset-x-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  line-height: 1.33;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+}
+
+p,
+span,
+button,
+div,
+a,
+label,
+input {
+  font-family: var(--secondary-font);
+}

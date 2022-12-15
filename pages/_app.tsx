@@ -1,6 +1,26 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.scss";
+import { Lora } from "@next/font/google";
+import localFont from "@next/font/local";
+import type { AppProps } from "next/app";
+
+const LORA_FONT = Lora({
+  subsets: ["latin"],
+});
+
+const SFPRO_FONT = localFont({ src: "../public/fonts/SF-Pro.ttf" });
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <style jsx global>
+        {`
+          :root {
+            --primary-font: ${LORA_FONT.style.fontFamily};
+            --secondary-font: ${SFPRO_FONT.style.fontFamily};
+          }
+        `}
+      </style>
+      <Component {...pageProps} />
+    </>
+  );
 }
