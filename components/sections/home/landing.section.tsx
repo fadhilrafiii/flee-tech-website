@@ -6,10 +6,10 @@ const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (videoRef) {
+    if (videoRef && videoRef.current) {
       videoRef.current?.play();
     }
-  }, []);
+  }, [videoRef]);
 
   return (
     <div className="relative flex flex-col w-full min-h-screen justify-center items-center">
@@ -19,7 +19,7 @@ const Landing = () => {
           ref={videoRef}
           className="h-full w-full object-cover"
           loop
-          autoPlay
+          preload="metadata"
           muted
         >
           <source src="videos/landing.mp4#t=0.5" type="video/mp4" />
