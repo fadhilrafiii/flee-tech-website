@@ -13,13 +13,8 @@ const MyDocument = () => {
   return (
     <Html lang="en">
       <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com/" />
-        <link rel="preload" href="/fonts/SF-Pro.ttf" />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css?family=Lora&display=swap"
-          as="style"
-        />
         <link rel="preload" href="/images/video-callback.jpg" as="image" />
       </Head>
       <body>
