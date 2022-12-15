@@ -19,7 +19,6 @@ const Landing = () => {
           ref={videoRef}
           className="h-full w-full object-cover"
           loop
-          preload="auto"
           autoPlay
           muted
         >
