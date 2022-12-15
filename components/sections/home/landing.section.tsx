@@ -11,7 +11,7 @@ const Landing = () => {
         </video>
       </div>
       <div className="h-100-parent bg-black bg-opacity-30" />
-      <div className="relative p-6 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[400px]">
+      <div className="relative w-full p-6 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[400px]">
         <h1 className="text-white text-5xl md:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto">
           We solve problem for design & develop software to increase your
           business value
