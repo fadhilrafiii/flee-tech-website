@@ -4,17 +4,21 @@
 
 @layer components {
   .border-x-1-white-50 {
-    border-left: 1px solid rgba(255, 255, 255);
-    border-right: 1px solid rgba(255, 255, 255);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .border-y-1-white-50 {
-    border-top: 1px solid rgba(255, 255, 255);
-    border-bottom: 1px solid rgba(255, 255, 255);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .border-1-white-50 {
-    border: 1px solid rgba(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .border-1-white-10 {
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .blur-22-white-10 {
@@ -39,6 +43,14 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+  }
+
+  .bg-gradient-white-50-0 {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 }
 

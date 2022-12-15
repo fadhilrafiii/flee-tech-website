@@ -1,4 +1,4 @@
-import ArrowRightFilled from "./icons/arrow-right";
+import ArrowRightFilledIcon from "../icons/arrow-right-filled";
 import Link from "next/link";
 import { HTMLAttributes } from "react";
 
@@ -19,7 +19,7 @@ const LinkButton = ({
       >
         <span className="font-bold text-white text-2xl">{children}</span>
         <span className="flex items-center">
-          <ArrowRightFilled size={28} />
+          <ArrowRightFilledIcon size={28} />
         </span>
       </div>
     </Link>

@@ -1,7 +1,7 @@
 import { IconProps } from "./utils";
 import React from "react";
 
-const ArrowDown = ({ size = 24, color = "#fff" }: IconProps) => {
+const ArrowDownIcon = ({ size = 24, color = "#fff" }: IconProps) => {
   return (
     <svg
       width={size}
@@ -19,4 +19,4 @@ const ArrowDown = ({ size = 24, color = "#fff" }: IconProps) => {
   );
 };
 
-export default ArrowDown;
+export default ArrowDownIcon;

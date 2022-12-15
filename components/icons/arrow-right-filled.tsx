@@ -1,6 +1,6 @@
 import { IconProps } from "./utils";
 
-const ArrowRightFilled = ({ size = 24, color = "#fff" }: IconProps) => {
+const ArrowRightFilledIcon = ({ size = 24, color = "#fff" }: IconProps) => {
   return (
     <svg
       width={size}
@@ -17,4 +17,4 @@ const ArrowRightFilled = ({ size = 24, color = "#fff" }: IconProps) => {
   );
 };
 
-export default ArrowRightFilled;
+export default ArrowRightFilledIcon;

@@ -1,4 +1,4 @@
-import ArrowDown from "components/icons/arrow-down";
+import ArrowDownIcon from "components/icons/arrow-down";
 import LinkButton from "components/link-button";
 import { useRef } from "react";
 
@@ -74,7 +74,7 @@ const Landing = () => {
         </div>
       </div>
       <span className="inset-x-center bottom-0 m-auto inline-block md:hidden p-4">
-        <ArrowDown size={24} />
+        <ArrowDownIcon size={24} />
       </span>
     </div>
   );

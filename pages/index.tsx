@@ -1,3 +1,4 @@
+import Navbar from "components/navbar";
 import Landing from "components/sections/home/landing.section";
 import Head from "next/head";
 import styles from "styles/Home.module.scss";
@@ -10,9 +11,10 @@ export default function Home() {
         <meta name="description" content="Flee Tech | Create your own app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <>
+      <main className="relative">
+        <Navbar />
         <Landing />
-      </>
+      </main>
     </div>
   );
 }

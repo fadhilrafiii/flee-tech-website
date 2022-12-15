@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import { Lora } from "@next/font/google";
 import localFont from "@next/font/local";
+import Navbar from "components/navbar";
 import type { AppProps } from "next/app";
 
 const LORA_FONT = Lora({
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}
       </style>
+      <Navbar />
       <Component {...pageProps} />
     </>
   );
