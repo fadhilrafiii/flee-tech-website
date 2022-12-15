@@ -24,7 +24,10 @@ const Landing = () => {
       </div>
       <div className="h-100-parent bg-black bg-opacity-30" />
       <div className="relative w-full p-6 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[400px]">
-        <h1 className="text-white text-5xl md:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto">
+        <h1
+          style={{ lineHeight: 1.3 }}
+          className="text-white text-5xl md:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto pt-[50px]"
+        >
           We solve problem for design & develop software to increase your
           business value
         </h1>
@@ -46,7 +49,9 @@ const Landing = () => {
               <LinkButton href="/" className="mb-4">
                 Lorem ipsum dolor
               </LinkButton>
-              <div>Lorem ipsum dolor sit amet consectetur</div>
+              <div>
+                Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{" "}
+              </div>
             </div>
           </div>
           <div className="flex flex-col">
@@ -57,7 +62,9 @@ const Landing = () => {
               <LinkButton href="/" className="mb-4">
                 Lorem ipsum dolor
               </LinkButton>
-              <div>Lorem ipsum dolor sit amet consectetur</div>
+              <div>
+                Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{" "}
+              </div>
             </div>
           </div>
           <div className="flex flex-col">
@@ -68,7 +75,9 @@ const Landing = () => {
               <LinkButton href="/" className="mb-4">
                 Lorem ipsum dolor
               </LinkButton>
-              <div>Lorem ipsum dolor sit amet consectetur</div>
+              <div>
+                Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{" "}
+              </div>
             </div>
           </div>
         </div>

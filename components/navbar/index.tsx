@@ -41,7 +41,7 @@ const Navbar = () => {
         {MENU_LIST.map((menu: MenuLink) => (
           <li
             key={menu.href}
-            className={`flex overflow-hidden font-semibold text-white text-2xl rounded-3xl ${
+            className={`flex overflow-hidden font-medium text-white text-2xl rounded-3xl ${
               pathname.indexOf(menu.href) > -1 ? " border-1-white-10" : ""
             }`}
           >
