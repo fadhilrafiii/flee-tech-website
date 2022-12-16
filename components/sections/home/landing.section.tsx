@@ -1,16 +1,42 @@
-import ArrowDownIcon from "components/icons/arrow-down";
-import LinkButton from "components/link-button";
-import { useRef } from "react";
+import ArrowDownIcon from 'components/icons/arrow-down';
+import LinkButton from 'components/link-button';
+
+import styles from './home.module.scss';
+
+interface LandingMenu {
+  title: string;
+  linkText: string;
+  href: string;
+  body: string;
+}
+
+const LANDING_MENUS: LandingMenu[] = [
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    linkText: 'Lorem ipsum dolor',
+    href: '/',
+    body: 'Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    linkText: 'Lorem ipsum dolor',
+    href: '/',
+    body: 'Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    linkText: 'Lorem ipsum dolor',
+    href: '/',
+    body: 'Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus',
+  },
+];
 
 const Landing = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   return (
     <div className="relative flex flex-col w-full min-h-screen justify-center items-center">
       <div className="h-100-parent">
         <video
-          poster="/images/video-callback.jpg"
-          ref={videoRef}
+          poster="/images/video-callback.webp"
           className="h-full w-full object-cover"
           loop
           autoPlay
@@ -18,15 +44,17 @@ const Landing = () => {
           preload="metadata"
           muted
         >
-          <source src="videos/landing.mp4#t=0.5" type="video/mp4" />
+          <source src="videos/landing.mp4#t=0.2" type="video/mp4" />
           Your browser does not support video
         </video>
       </div>
       <div className="h-100-parent bg-black bg-opacity-30" />
       <div className="relative w-full p-6 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[60vh]">
         <h1
-          style={{ lineHeight: 1.3 }}
-          className="text-white text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto pt-[50px]"
+          className={
+            'text-white text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] ' +
+            styles.landingHeading
+          }
         >
           We solve problem for design & develop software to increase your
           business value
@@ -41,45 +69,21 @@ const Landing = () => {
           <LinkButton href="/">Lorem ipsum dolor</LinkButton>
         </div>
         <div className="flex-grow flex basis-[60%] w-full">
-          <div className="flex flex-col">
-            <div className="flex-grow p-5 blur-22-white-10 text-white text-2xl">
-              Lorem ipsum dolor sit amet consectetur
-            </div>
-            <div className="p-5 text-white text-2xl blur-5-white-10">
-              <LinkButton href="/" className="mb-4">
-                Lorem ipsum dolor
-              </LinkButton>
-              <div>
-                Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{" "}
+          {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
+            <div key={idx} className="flex flex-col min-w-[220px]">
+              <div className="flex-grow p-5 blur-22-white-10 text-white text-2xl">
+                Lorem ipsum dolor sit amet consectetur
+              </div>
+              <div className="p-5 text-white text-2xl blur-5-white-10">
+                <LinkButton href="/" className="mb-4">
+                  Lorem ipsum dolor
+                </LinkButton>
+                <div>
+                  Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{' '}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex-grow p-5 blur-22-white-10 text-white text-2xl">
-              Lorem ipsum dolor sit amet consectetur
-            </div>
-            <div className="p-5 text-white text-2xl blur-5-white-10">
-              <LinkButton href="/" className="mb-4">
-                Lorem ipsum dolor
-              </LinkButton>
-              <div>
-                Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{" "}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex-grow p-5 blur-22-white-10 text-white text-2xl">
-              Lorem ipsum dolor sit amet consectetur
-            </div>
-            <div className="p-5 text-white text-2xl blur-5-white-10">
-              <LinkButton href="/" className="mb-4">
-                Lorem ipsum dolor
-              </LinkButton>
-              <div>
-                Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{" "}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <span className="inset-x-center bottom-0 m-auto inline-block md:hidden p-4">

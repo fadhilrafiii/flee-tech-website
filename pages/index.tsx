@@ -1,7 +1,8 @@
-import Navbar from "components/navbar";
-import Landing from "components/sections/home/landing.section";
-import Head from "next/head";
-import styles from "styles/Home.module.scss";
+import Head from 'next/head';
+
+import Landing from 'components/sections/home/landing.section';
+
+import styles from 'styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
         <title>Flee Tech</title>
         <meta name="description" content="Flee Tech | Create your own app" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/images/video-callback.webp" as="image" />
       </Head>
       <main className="relative">
-        <Navbar />
         <Landing />
       </main>
     </div>

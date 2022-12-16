@@ -1,0 +1,7 @@
+.landingHeading {
+  line-height: 1;
+
+  @media (min-width: 768px) {
+    line-height: 1.33;
+  }
+}

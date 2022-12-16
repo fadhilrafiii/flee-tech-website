@@ -1,13 +1,13 @@
-import { AppType } from "next/dist/shared/lib/utils";
+import { AppType } from 'next/dist/shared/lib/utils';
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
   DocumentContext,
   DocumentInitialProps,
-} from "next/document";
-import * as React from "react";
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
+import * as React from 'react';
 
 const MyDocument = () => {
   return (
@@ -20,7 +20,6 @@ const MyDocument = () => {
           href="https://fonts.googleapis.com/css?family=Lora&display=swap"
         />
         <link rel="preload" href="/fonts/SF-Pro.ttf" />
-        <link rel="preload" href="/images/video-callback.jpg" as="image" />
       </Head>
       <body>
         <Main />
@@ -33,7 +32,7 @@ const MyDocument = () => {
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
 MyDocument.getInitialProps = async (
-  ctx: DocumentContext
+  ctx: DocumentContext,
 ): Promise<DocumentInitialProps> => {
   const originalRenderPage = ctx.renderPage;
 
