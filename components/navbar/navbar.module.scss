@@ -60,15 +60,29 @@
     right: 2.75rem;
     left: calc(100vw - 2.75rem - 40px);
     bottom: calc(100vh - 2rem - 40px);
+
+    li {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 479px) {
+    top: 1rem;
+    right: 1.25rem;
+    left: calc(100vw - 1.25rem - 40px);
+    bottom: calc(100vh - 1rem - 40px);
   }
 }
 
 .menu {
   @include menu-default;
+}
+
+.menuInactive {
   transition: all 0.5s;
 
   @media (max-width: 767px) {
-    animation: hideMenu 1s ease-in-out;
+    animation: hideMenuTab 1s ease-in-out;
     animation-fill-mode: forwards;
 
     li {
@@ -76,14 +90,23 @@
       opacity: 0;
     }
   }
+
+  @media (max-width: 479px) {
+    animation: hideMenuMobile 1s ease-in-out;
+    animation-fill-mode: forwards;
+
+    li {
+      transition: all 0.25s;
+      opacity: 0 !important;
+    }
+  }
 }
 
 .menuActive {
-  @include menu-default;
   transition: all 0.5s;
 
   @media (max-width: 767px) {
-    animation: showMenu 1s ease-in-out;
+    animation: showMenuTab 1s ease-in-out;
     animation-fill-mode: forwards;
 
     li {
@@ -92,9 +115,14 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 479px) {
+    animation: showMenuMobile 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
 }
 
-@keyframes showMenu {
+@keyframes showMenuTab {
   0% {
     top: 2rem;
     right: 2.75rem;
@@ -118,7 +146,7 @@
   }
 }
 
-@keyframes hideMenu {
+@keyframes hideMenuTab {
   0% {
     opacity: 1;
     top: 0;
@@ -139,5 +167,53 @@
     right: 2.75rem;
     left: calc(100vw - 2.75rem - 40px);
     bottom: calc(100vh - 2rem - 40px);
+  }
+}
+
+@keyframes showMenuMobile {
+  0% {
+    top: 1rem;
+    right: 1.25rem;
+    left: calc(100vw - 1.25rem - 40px);
+    bottom: calc(100vh - 1rem - 40px);
+  }
+  50% {
+    opacity: 0.5;
+    left: calc(50vw - 100px);
+    top: calc(50vh - 100px);
+    right: calc(50vw - 100px);
+    bottom: calc(50vh - 100px);
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+@keyframes hideMenuMobile {
+  0% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+  50% {
+    opacity: 0.5;
+    left: calc(50vw - 100px);
+    top: calc(50vh - 100px);
+    right: calc(50vw - 100px);
+    bottom: calc(50vh - 100px);
+  }
+  100% {
+    top: 1rem;
+    right: 1.25rem;
+    left: calc(100vw - 1.25rem - 40px);
+    bottom: calc(100vh - 1rem - 40px);
   }
 }
