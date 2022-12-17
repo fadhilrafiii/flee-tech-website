@@ -76,7 +76,7 @@ const Navbar = () => {
             className={`${
               menu.href === '/' ? 'md:hidden' : ''
             } flex overflow-hidden font-medium text-white text-4xl md:text-2xl rounded-[2.5rem] md:rounded-3xl ${
-              pathname.indexOf(menu.href) > -1 ? ' border-1-white-10' : ''
+              pathname === menu.href ? ' border-1-white-10' : ''
             }`}
           >
             <Link

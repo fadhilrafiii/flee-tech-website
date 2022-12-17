@@ -19,7 +19,7 @@ const SFPRO_FONT = localFont({
   src: '../public/fonts/SF-Pro.ttf',
   variable: '--secondary-font',
   preload: true,
-  fallback: ['sans-serif'],
+  fallback: ['Times New Roman'],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
