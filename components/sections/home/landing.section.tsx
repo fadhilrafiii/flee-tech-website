@@ -49,10 +49,10 @@ const Landing = () => {
         </video>
       </div>
       <div className="h-100-parent bg-black bg-opacity-30" />
-      <div className="relative w-full p-6 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[60vh]">
+      <div className="relative w-full p-11 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[60vh]">
         <h1
           className={
-            'text-white text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] ' +
+            'text-white text-[2.75rem] sm:text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] ' +
             styles.landingHeading
           }
         >

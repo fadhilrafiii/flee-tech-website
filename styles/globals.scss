@@ -1,2 +1,38 @@
-@use "base/fonts.scss";
-@use "base/global.scss";
+@use 'base/tailwind.scss';
+
+:root {
+  --primary-color: #01033d;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  line-height: 1.33;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+}
+
+p,
+span,
+button,
+div,
+a,
+label,
+input {
+  font-family: var(--secondary-font);
+}

@@ -76,6 +76,7 @@
 
 .menu {
   @include menu-default;
+  pointer-events: none;
 }
 
 .menuInactive {
@@ -143,6 +144,7 @@
     right: 0;
     bottom: 0;
     border-radius: 0;
+    pointer-events: all;
   }
 }
 
@@ -167,6 +169,7 @@
     right: 2.75rem;
     left: calc(100vw - 2.75rem - 40px);
     bottom: calc(100vh - 2rem - 40px);
+    pointer-events: none;
   }
 }
 
@@ -191,6 +194,7 @@
     right: 0;
     bottom: 0;
     border-radius: 0;
+    pointer-events: all;
   }
 }
 
@@ -215,5 +219,6 @@
     right: 1.25rem;
     left: calc(100vw - 1.25rem - 40px);
     bottom: calc(100vh - 1rem - 40px);
+    pointer-events: none;
   }
 }

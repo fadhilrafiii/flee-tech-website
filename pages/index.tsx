@@ -13,9 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preload" href="/images/video-callback.webp" as="image" />
       </Head>
-      <main className="relative">
+      <div className="relative">
         <Landing />
-      </main>
+      </div>
     </div>
   );
 }
