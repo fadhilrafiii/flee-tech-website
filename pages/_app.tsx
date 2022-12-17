@@ -19,7 +19,6 @@ const SFPRO_FONT = localFont({
   src: '../public/fonts/SF-Pro.ttf',
   variable: '--secondary-font',
   preload: true,
-  fallback: ['sans-serif'],
 });
 
 export default function App({ Component, pageProps }: AppProps) {

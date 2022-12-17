@@ -17,7 +17,7 @@ module.exports = {
     },
     fontFamily: {
       primary: ['var(--primary-font)', ...fontFamily.serif],
-      secondary: ['var(--secondary-font)', 'sans-serif'],
+      secondary: ['var(--secondary-font)', ...fontFamily.sans],
     },
   },
   plugins: [],
