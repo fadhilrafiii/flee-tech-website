@@ -23,9 +23,17 @@ const SFPRO_FONT = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${LORA_FONT.variable} ${SFPRO_FONT.variable}`}>
+    <>
+      <style jsx global>
+        {`
+          :root {
+            --primary-font: ${LORA_FONT.style.fontFamily};
+            --secondary-font: ${SFPRO_FONT.style.fontFamily} sans-serif;
+          }
+        `}
+      </style>
       <Navbar />
       <Component {...pageProps} />
-    </div>
+    </>
   );
 }
