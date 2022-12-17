@@ -82,7 +82,7 @@ const Navbar = () => {
             <Link
               href={menu.href}
               className={`py-3 md:py-2 px-8 md:px-7 ${
-                pathname.indexOf(menu.href) > -1 ? 'bg-gradient-white-50-0' : ''
+                pathname === menu.href ? 'bg-gradient-white-50-0' : ''
               }`}
               onClick={() => onToggleMenu(false)}
             >
