@@ -49,6 +49,7 @@
 
 @mixin menu-default {
   @media (max-width: 767px) {
+    pointer-events: none;
     border-radius: 100%;
     background-color: var(--primary-color);
     flex-direction: column;
@@ -76,7 +77,6 @@
 
 .menu {
   @include menu-default;
-  pointer-events: none;
 }
 
 .menuInactive {
