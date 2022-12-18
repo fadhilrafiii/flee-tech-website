@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed flex justify-between opa ${
+      className={`fixed flex justify-between ${
         currentPageY > prevPageY
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100'

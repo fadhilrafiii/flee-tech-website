@@ -77,6 +77,17 @@
 
 .menu {
   @include menu-default;
+
+  @media (max-width: 767px) {
+    will-change: top, left, right, bottom, opacity;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+  }
 }
 
 .menuInactive {
