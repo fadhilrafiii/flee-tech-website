@@ -63,7 +63,11 @@ const Navbar = () => {
           : 'opacity-100'
       } left-0 right-0 py-4 sm:py-8 px-5 sm:px-11 z-20 items-center w-full transition-all duration-300 will-change-[opacity]`}
     >
-      <Link href="/" className={'flex gap-3 items-center z-10 ' + styles.logo}>
+      <Link
+        href="/"
+        onClick={() => onToggleMenu(false)}
+        className={'flex gap-3 items-center z-10 ' + styles.logo}
+      >
         <LogoIcon size={36} />
         <span
           role="button"
