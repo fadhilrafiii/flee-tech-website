@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+
+import ScrollContext from 'context/scroll.context';
+import { ScrollState } from 'types/scroll';
 
 import LogoIcon from 'components/icons/logo';
 
@@ -33,6 +36,7 @@ export const MENU_LIST: MenuLink[] = [
 ];
 
 const Navbar = () => {
+  const { currentPageY, prevPageY }: ScrollState = useContext(ScrollContext);
   const menuRef = useRef<HTMLUListElement>(null);
   const { pathname } = useRouter();
   const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);
@@ -52,7 +56,13 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed flex justify-between top-0 left-0 right-0 py-4 sm:py-8 px-5 sm:px-11 z-20 items-center w-full">
+    <header
+      className={`fixed flex justify-between opa ${
+        currentPageY > prevPageY
+          ? 'opacity-0 pointer-events-none'
+          : 'opacity-100'
+      } top-0 left-0 right-0 py-4 sm:py-8 px-5 sm:px-11 z-20 items-center w-full transition-all duration-300`}
+    >
       <Link href="/" className={'flex gap-3 items-center z-10 ' + styles.logo}>
         <LogoIcon size={36} />
         <span

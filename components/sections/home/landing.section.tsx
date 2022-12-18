@@ -33,7 +33,10 @@ const LANDING_MENUS: LandingMenu[] = [
 
 const Landing = () => {
   return (
-    <div className="relative flex flex-col w-full min-h-screen justify-center items-center">
+    <section
+      id="landing"
+      className="relative flex flex-col w-full min-h-screen justify-center items-center"
+    >
       <div className="h-100-parent">
         <video
           poster="/images/video-callback.webp"
@@ -89,7 +92,7 @@ const Landing = () => {
       <span className="inset-x-center bottom-0 m-auto inline-block md:hidden p-4">
         <ArrowDownIcon size={24} />
       </span>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,8 @@
 import type { AppProps } from 'next/app';
 
-import { Lora } from '@next/font/google';
-import localFont from '@next/font/local';
+import { Inter, Lora } from '@next/font/google';
+import { ScrollContextProvider } from 'context/scroll.context';
+import useScroll from 'hooks/use-scroll';
 
 import Navbar from 'components/navbar';
 
@@ -15,18 +16,23 @@ const LORA_FONT = Lora({
   display: 'swap',
 });
 
-const SFPRO_FONT = localFont({
-  src: '../public/fonts/SF-Pro.ttf',
+const INTER_FONT = Inter({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
   variable: '--secondary-font',
   preload: true,
-  fallback: ['Arial'],
+  display: 'swap',
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const scrollState = useScroll();
+
   return (
-    <div className={`${LORA_FONT.variable} ${SFPRO_FONT.variable}`}>
-      <Navbar />
-      <Component {...pageProps} />
-    </div>
+    <ScrollContextProvider value={scrollState}>
+      <div className={`${LORA_FONT.variable} ${INTER_FONT.variable}`}>
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
+    </ScrollContextProvider>
   );
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Landing from 'components/sections/home/landing.section';
+import OurClient from 'components/sections/home/our-client';
 
 import styles from 'styles/Home.module.scss';
 
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
       <div className="relative">
         <Landing />
+        <OurClient />
       </div>
     </div>
   );
