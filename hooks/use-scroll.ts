@@ -8,14 +8,14 @@ const useScroll = () => {
     prevPageY: 0,
   });
 
-  const handleScrollPage = () => {
-    setScrollState((prev: ScrollState) => ({
-      prevPageY: prev.currentPageY,
-      currentPageY: window.pageYOffset,
-    }));
-  };
-
   useEffect(() => {
+    const handleScrollPage = () => {
+      setScrollState((prev: ScrollState) => ({
+        prevPageY: prev.currentPageY,
+        currentPageY: window.pageYOffset,
+      }));
+    };
+
     if (window) window.addEventListener('scroll', handleScrollPage);
 
     return () => {
