@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext, useRef, useState } from 'react';
 
-import ScrollContext from 'context/scroll.context';
+import ScrollContext from 'shared/context/scroll.context';
 import { ScrollState } from 'types/scroll';
 
 import LogoIcon from 'components/icons/logo';

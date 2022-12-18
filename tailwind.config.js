@@ -14,10 +14,15 @@ module.exports = {
       primary: '#01033D',
       black: '#000000',
       white: '#ffffff',
+      'dark-grey': '#4A4A4A',
+      grey: '#999494',
     },
     fontFamily: {
       primary: ['var(--primary-font)', ...fontFamily.serif],
       secondary: ['var(--secondary-font)', 'Arial', ...fontFamily.sans],
+    },
+    border: {
+      DEFAULT: '1px',
     },
   },
   plugins: [],

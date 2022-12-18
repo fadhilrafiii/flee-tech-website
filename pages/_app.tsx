@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app';
 
 import { Inter, Lora } from '@next/font/google';
-import { ScrollContextProvider } from 'context/scroll.context';
-import useScroll from 'hooks/use-scroll';
+import { ScrollContextProvider } from 'shared/context/scroll.context';
+import useScroll from 'shared/hooks/use-scroll';
 
 import Navbar from 'components/navbar';
 

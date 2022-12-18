@@ -5,3 +5,11 @@
     line-height: 1.33;
   }
 }
+
+.valueIcon svg {
+  height: 64px;
+
+  @media (min-width: 380px) {
+    height: 80px;
+  }
+}
