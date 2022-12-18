@@ -79,7 +79,7 @@
   @include menu-default;
 
   @media (max-width: 767px) {
-    will-change: top, left, right, bottom, opacity;
+    will-change: transform;
   }
 }
 
