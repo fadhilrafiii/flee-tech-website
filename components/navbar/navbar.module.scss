@@ -51,11 +51,11 @@
   @media (max-width: 767px) {
     pointer-events: none;
     border-radius: 100%;
+    transition: all 0.25s;
     background-color: var(--primary-color);
     flex-direction: column;
     justify-content: center !important;
     align-items: center;
-    transition: all 2s;
     overflow: hidden;
     top: 2rem;
     right: 2.75rem;
@@ -90,10 +90,10 @@
 }
 
 .menuInactive {
-  transition: all 0.5s;
+  transition: all 0.25s;
 
   @media (max-width: 767px) {
-    animation: hideMenuTab 1s ease-in-out;
+    animation: hideMenuTab 0.5s ease-in-out;
     animation-fill-mode: forwards;
 
     li {
@@ -103,7 +103,7 @@
   }
 
   @media (max-width: 479px) {
-    animation: hideMenuMobile 1s ease-in-out;
+    animation: hideMenuMobile 0.5s ease-in-out;
     animation-fill-mode: forwards;
 
     li {
@@ -114,21 +114,21 @@
 }
 
 .menuActive {
-  transition: all 0.5s;
+  transition: all 0.25s;
 
   @media (max-width: 767px) {
-    animation: showMenuTab 1s ease-in-out;
+    animation: showMenuTab 0.5s ease-in-out;
     animation-fill-mode: forwards;
 
     li {
-      transition: all 0.75s;
-      transition-delay: 1s;
+      transition: all 0.25s;
+      transition-delay: 0.5s;
       opacity: 1;
     }
   }
 
   @media (max-width: 479px) {
-    animation: showMenuMobile 1s ease-in-out;
+    animation: showMenuMobile 0.5s ease-in-out;
     animation-fill-mode: forwards;
   }
 }
