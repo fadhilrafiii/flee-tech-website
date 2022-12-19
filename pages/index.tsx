@@ -2,7 +2,8 @@ import Head from 'next/head';
 
 import Landing from 'components/sections/home/landing.section';
 import OurClient from 'components/sections/home/our-client.section';
-import OurValue from 'components/sections/home/our-value.section';
+import OurServices from 'components/sections/home/our-services.section';
+import OurValues from 'components/sections/home/our-value.section';
 
 import styles from 'styles/Home.module.scss';
 
@@ -17,8 +18,11 @@ export default function Home() {
       </Head>
       <div className="relative">
         <Landing />
-        <OurClient />
-        <OurValue />
+        <div className="border border-grey divide-y divide-grey">
+          <OurClient />
+          <OurValues />
+        </div>
+        <OurServices />
       </div>
     </div>
   );

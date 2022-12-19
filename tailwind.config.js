@@ -14,6 +14,7 @@ module.exports = {
       primary: '#01033D',
       black: '#000000',
       white: '#ffffff',
+      'white-75': 'rgba(255, 255, 255, 0.75)',
       'dark-grey': '#4A4A4A',
       grey: '#999494',
     },
@@ -23,6 +24,7 @@ module.exports = {
     },
     border: {
       DEFAULT: '1px',
+      '05': '0.5px',
     },
   },
   plugins: [],

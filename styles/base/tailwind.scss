@@ -21,15 +21,15 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .blur-22-white-10 {
+  .blur-12-white-10 {
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(12px);
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
-    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000;
-    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
     will-change: transform;
   }
 
@@ -38,10 +38,10 @@
     backdrop-filter: blur(5px);
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
-    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000;
-    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
     will-change: transform;
   }
 

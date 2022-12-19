@@ -37,10 +37,10 @@ const VALUES: OurValue[] = [
   },
 ];
 
-const OurValue = () => {
+const OurValues = () => {
   return (
-    <section id="our-value">
-      <div className="flex flex-col justify-center items-center py-10 sm:py-28 px-8 border border-grey border-solid">
+    <section id="our-value" className="divide-y divide-grey">
+      <div className="flex flex-col justify-center items-center py-10 sm:py-28 px-8">
         <div className="text-sm md:text-xl tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
           Greeting, we are flee tech
         </div>
@@ -53,11 +53,11 @@ const OurValue = () => {
           attention to your business, design, and quality.
         </h2>
       </div>
-      <div className="flex flex-col md:flex-row border-y border-grey">
+      <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-grey">
         {VALUES.map(({ Icon, ...value }: OurValue, idx: number) => (
           <div
             key={idx}
-            className="py-10 px-6 sm:p-12 md:p-8 lg:p-16 basis-1/3 border border-grey"
+            className="py-10 px-6 sm:p-12 md:p-8 lg:p-16 basis-1/3"
           >
             <div className={'mb-10 sm:mb-16 ' + styles.valueIcon}>
               <Icon size={80} color={Colors.Primary} />
@@ -76,4 +76,4 @@ const OurValue = () => {
   );
 };
 
-export default OurValue;
+export default OurValues;

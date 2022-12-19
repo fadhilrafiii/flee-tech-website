@@ -64,7 +64,7 @@ const Landing = () => {
         </h1>
       </div>
       <div className="relative hidden md:flex flex-wrap z-10">
-        <div className="flex-grow p-10 blur-22-white-10 basis-[40%] min-w-[360px] lg:min-w-[450px] w-full">
+        <div className="flex-grow p-10 blur-12-white-10 basis-[40%] min-w-[360px] lg:min-w-[450px] w-full">
           <h3 className="text-white text-3xl mb-14">
             Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus ut
             morbi egestas.
@@ -74,7 +74,7 @@ const Landing = () => {
         <div className="flex-grow flex basis-[60%] w-full">
           {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
             <div key={idx} className="flex flex-col min-w-[220px]">
-              <div className="flex-grow p-5 blur-22-white-10 text-white text-2xl">
+              <div className="flex-grow p-5 blur-12-white-10 text-white text-2xl">
                 Lorem ipsum dolor sit amet consectetur
               </div>
               <div className="p-5 text-white text-2xl blur-5-white-10">

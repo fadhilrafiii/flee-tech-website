@@ -1,6 +1,7 @@
-import ArrowRightFilledIcon from "../icons/arrow-right-filled";
-import Link from "next/link";
-import { HTMLAttributes } from "react";
+import Link from 'next/link';
+import { HTMLAttributes } from 'react';
+
+import ArrowRightFilledIcon from '../icons/arrow-right-filled';
 
 export interface LinkButtonProps extends HTMLAttributes<HTMLDivElement> {
   href?: string;
@@ -8,14 +9,14 @@ export interface LinkButtonProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const LinkButton = ({
-  href = "/",
+  href = '/',
   children,
-  className = "",
+  className = '',
 }: LinkButtonProps) => {
   return (
     <Link href={href}>
       <div
-        className={`${className} flex mb-4 items-center justify-between max-w-[320px] gap-2`}
+        className={`flex mb-4 items-center justify-between max-w-[320px] gap-2 ${className}`}
       >
         <span className="font-bold text-white text-2xl">{children}</span>
         <span className="flex items-center">

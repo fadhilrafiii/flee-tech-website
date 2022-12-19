@@ -36,7 +36,8 @@ export const MENU_LIST: MenuLink[] = [
 ];
 
 const Navbar = () => {
-  const { currentPageY, prevPageY }: ScrollState = useContext(ScrollContext);
+  const { currentPageY, prevPageY, clientHeight }: ScrollState =
+    useContext(ScrollContext);
   const menuRef = useRef<HTMLUListElement>(null);
   const { pathname } = useRouter();
   const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);
@@ -61,6 +62,10 @@ const Navbar = () => {
         currentPageY > prevPageY
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100'
+      } ${
+        currentPageY < prevPageY && currentPageY > clientHeight
+          ? 'bg-primary bg-opacity-50'
+          : ''
       } left-0 right-0 py-4 sm:py-8 px-5 sm:px-11 z-20 items-center w-full transition-all duration-300 will-change-[opacity]`}
     >
       <Link
