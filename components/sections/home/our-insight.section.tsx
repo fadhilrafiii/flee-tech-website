@@ -1,13 +1,14 @@
 import Image, { StaticImageData } from 'next/image';
 import { useContext, useMemo } from 'react';
 
-import { Colors } from 'shared/constants/colors';
-import WindowDimensionContext from 'shared/context/window-dimension.context';
 import { FreeMode } from 'swiper';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import LinkButton from 'components/link-button';
+
+import { Colors } from 'shared/constants/colors';
+import WindowDimensionContext from 'shared/context/window-dimension.context';
 
 import DummyInsightImg from 'public/images/dummy-insight.jpg';
 
@@ -53,9 +54,9 @@ const OurInsights = () => {
   return (
     <section
       id="our-insight"
-      className="px-8 lg:px-20 py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-14"
+      className="px-8 lg:px-20 py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12"
     >
-      <div className="lg:max-w-[260px]">
+      <div className="lg:max-w-[300px]">
         <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-1 sm:mb-6 !leading-snug">
           our recent insight
         </h3>
