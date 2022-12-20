@@ -3,7 +3,9 @@ import { useRouter } from 'next/router';
 import { useContext, useRef, useState } from 'react';
 
 import ScrollContext from 'shared/context/scroll.context';
+import WindowDimensionContext from 'shared/context/window-dimension.context';
 import { ScrollState } from 'types/scroll';
+import { WindowDimension } from 'types/window';
 
 import LogoIcon from 'components/icons/logo';
 
@@ -36,8 +38,10 @@ export const MENU_LIST: MenuLink[] = [
 ];
 
 const Navbar = () => {
-  const { currentPageY, prevPageY, clientHeight }: ScrollState =
-    useContext(ScrollContext);
+  const { currentPageY, prevPageY }: ScrollState = useContext(ScrollContext);
+  const { height: clientHeight }: WindowDimension = useContext(
+    WindowDimensionContext,
+  );
   const menuRef = useRef<HTMLUListElement>(null);
   const { pathname } = useRouter();
   const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);

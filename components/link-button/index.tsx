@@ -6,12 +6,14 @@ import ArrowRightFilledIcon from '../icons/arrow-right-filled';
 export interface LinkButtonProps extends HTMLAttributes<HTMLDivElement> {
   href?: string;
   children: React.ReactNode | React.ReactNode[] | string;
+  iconColor?: string;
 }
 
 const LinkButton = ({
   href = '/',
   children,
   className = '',
+  iconColor = '#fff',
 }: LinkButtonProps) => {
   return (
     <Link href={href}>
@@ -20,7 +22,7 @@ const LinkButton = ({
       >
         <span className="font-bold text-white text-2xl">{children}</span>
         <span className="flex items-center">
-          <ArrowRightFilledIcon size={28} />
+          <ArrowRightFilledIcon size={28} color={iconColor} />
         </span>
       </div>
     </Link>

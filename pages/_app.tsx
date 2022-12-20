@@ -2,7 +2,9 @@ import type { AppProps } from 'next/app';
 
 import { Inter, Lora } from '@next/font/google';
 import { ScrollContextProvider } from 'shared/context/scroll.context';
+import { WindowDimensionContextProvider } from 'shared/context/window-dimension.context';
 import useScroll from 'shared/hooks/use-scroll';
+import useWindowDimension from 'shared/hooks/use-window-dimension';
 
 import Navbar from 'components/navbar';
 
@@ -26,13 +28,16 @@ const INTER_FONT = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   const scrollState = useScroll();
+  const windowDimension = useWindowDimension();
 
   return (
-    <ScrollContextProvider value={scrollState}>
-      <div className={`${LORA_FONT.variable} ${INTER_FONT.variable}`}>
-        <Navbar />
-        <Component {...pageProps} />
-      </div>
-    </ScrollContextProvider>
+    <WindowDimensionContextProvider value={windowDimension}>
+      <ScrollContextProvider value={scrollState}>
+        <div className={`${LORA_FONT.variable} ${INTER_FONT.variable}`}>
+          <Navbar />
+          <Component {...pageProps} />
+        </div>
+      </ScrollContextProvider>
+    </WindowDimensionContextProvider>
   );
 }

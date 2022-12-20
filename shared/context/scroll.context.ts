@@ -5,7 +5,6 @@ import { ScrollState } from 'types/scroll';
 const ScrollContext = createContext<ScrollState>({
   currentPageY: 0,
   prevPageY: 0,
-  clientHeight: 0,
 });
 
 export const ScrollContextProvider = ScrollContext.Provider;

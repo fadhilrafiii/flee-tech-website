@@ -32,19 +32,19 @@ const OurWorks = () => {
   return (
     <section
       id="our-work"
-      className="py-12 md:py-20 px-8 lg:px-16 flex flex-col items-center"
+      className="py-12 md:py-20 px-8 lg:px-16 flex flex-col items-center justify-center"
     >
       <div className="text-center text-sm sm:text-xl uppercase text-primary tracking-[2px] sm:tracking-[6px] px-6 mb-3">
         work / review
       </div>
-      <h2 className="text-primary text-4xl sm:text-6xl mb-4 text-center capitalize">
+      <h2 className="text-primary text-4xl md:text-6xl mb-4 text-center capitalize">
         Lorem Ipsum
       </h2>
       <p className="text-base text-primary text-center mb-9">
         Lorem Ipsum has been the industry&lsquo;s standard dummy text ever since
         the 1500s
       </p>
-      <div className="flex flex-wrap justify-evenly gap-8 lg:gap-12 w-full">
+      <div className="flex flex-wrap justify-around gap-8 lg:gap-12 w-full max-w-[1440px]">
         {WORKS.map((work: OurWork, idx: number) => (
           <div
             key={idx}
