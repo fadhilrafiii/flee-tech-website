@@ -14,10 +14,10 @@ import styles from './home.module.scss';
 import DailyAppImg from 'public/images/daily-app.jpg';
 import ImbdLikeImg from 'public/images/imbd-like.jpg';
 import JinxBoardImg from 'public/images/jinx-board.jpg';
-import Mentor1Img from 'public/images/mentor-1.jpg';
 import Mentor2Img from 'public/images/mentor-2.jpg';
 import Mentor3Img from 'public/images/mentor-3.jpg';
 import PonpesAlhadiImg from 'public/images/ponpes-alhadi.jpg';
+import UUImg from 'public/images/uu-app.jpg';
 import WebsiteTemplateImg from 'public/images/website-template.jpg';
 
 interface ProjectImage {
@@ -58,8 +58,8 @@ const PROJECT_IMAGES_SECOND_ROW: ProjectImage[] = [
     alt: 'Instant Website Template Project',
   },
   {
-    src: Mentor1Img,
-    alt: 'Mentor 1 Project',
+    src: UUImg,
+    alt: 'Undang Undang Project',
   },
   {
     src: Mentor2Img,
@@ -74,8 +74,8 @@ const PROJECT_IMAGES_SECOND_ROW: ProjectImage[] = [
     alt: 'Instant Website Template Project 2',
   },
   {
-    src: Mentor1Img,
-    alt: 'Mentor 1 Project 2',
+    src: UUImg,
+    alt: 'Undang Undang Project 2',
   },
 ];
 
@@ -113,13 +113,13 @@ const OurServices = () => {
       id="our-services"
       className="pt-14 bg-primary flex flex-col items-center"
     >
-      <div className="text-center uppercase text-white-75 tracking-[2px] sm:tracking-[6px] px-6 mb-3">
+      <div className=" text-sm sm:text-xl text-center uppercase text-white-75 tracking-[2px] sm:tracking-[6px] px-6 mb-3">
         services
       </div>
       <h2 className="capitalize text-4xl md:text-6xl px-6 text-white mb-4 text-center">
         create custom solutions
       </h2>
-      <p className="text-xs sm:text-base text-white text-center max-w-[632px] px-6">
+      <p className="text-sm sm:text-base text-white text-center max-w-[632px] px-6">
         We understand your unique problem need a unique solution, we deliver the
         best solution that solving your specific problem
       </p>

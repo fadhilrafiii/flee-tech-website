@@ -4,6 +4,7 @@ import Landing from 'components/sections/home/landing.section';
 import OurClient from 'components/sections/home/our-client.section';
 import OurServices from 'components/sections/home/our-services.section';
 import OurValues from 'components/sections/home/our-value.section';
+import OurWorks from 'components/sections/home/our-work.section';
 
 import styles from 'styles/Home.module.scss';
 
@@ -23,6 +24,9 @@ export default function Home() {
           <OurValues />
         </div>
         <OurServices />
+        <div className="border border-grey divide-y divide-grey">
+          <OurWorks />
+        </div>
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ const OurValues = () => {
   return (
     <section id="our-value" className="divide-y divide-grey">
       <div className="flex flex-col justify-center items-center py-10 sm:py-28 px-8">
-        <div className="text-sm md:text-xl tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
+        <div className="text-sm sm:text-xl tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
           Greeting, we are flee tech
         </div>
         <h2
