@@ -6,6 +6,16 @@
   }
 }
 
+.landingBigBoxMenu {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+
+  @media (min-width: 1127px) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+  }
+}
+
 .valueIcon svg {
   height: 64px !important;
 

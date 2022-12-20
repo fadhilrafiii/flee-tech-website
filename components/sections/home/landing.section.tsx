@@ -63,21 +63,32 @@ const Landing = () => {
           business value
         </h1>
       </div>
-      <div className="relative hidden md:flex flex-wrap z-10">
-        <div className="flex-grow p-10 blur-12-white-10 basis-[40%] min-w-[360px] lg:min-w-[450px] w-full">
+      <div className="relative hidden md:flex flex-wrap z-10 border border-white-50">
+        <div
+          className={
+            'flex-grow p-10 blur-12-white-10 basis-[40%] min-w-[360px] lg:min-w-[450px] w-full ' +
+            styles.landingBigBoxMenu
+          }
+        >
           <h3 className="text-white text-3xl mb-14">
             Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus ut
             morbi egestas.
           </h3>
           <LinkButton href="/">Lorem ipsum dolor</LinkButton>
         </div>
-        <div className="flex-grow flex basis-[60%] w-full">
-          {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
-            <div key={idx} className="flex flex-col min-w-[220px]">
-              <div className="flex-grow p-5 blur-12-white-10 text-white text-2xl">
-                Lorem ipsum dolor sit amet consectetur
+        <div className="flex-grow flex flex-col basis-[60%] w-full divide-y divide-white-50">
+          <div className="flex blur-12-white-10 divide-x divide-white-50">
+            {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
+              <div key={idx} className="flex flex-col min-w-[220px] basis-1/3">
+                <div className="flex-grow p-5 text-white text-2xl">
+                  Lorem ipsum dolor sit amet consectetur
+                </div>
               </div>
-              <div className="p-5 text-white text-2xl blur-5-white-10">
+            ))}
+          </div>
+          <div className="flex blur-5-white-10 divide-x divide-white-50 basis-1/3">
+            {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
+              <div key={idx} className="p-5 text-white text-2xl">
                 <LinkButton href="/" className="mb-4">
                   Lorem ipsum dolor
                 </LinkButton>
@@ -85,8 +96,8 @@ const Landing = () => {
                   Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{' '}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <span className="inset-x-center bottom-0 m-auto inline-block md:hidden p-4">
