@@ -164,3 +164,10 @@
     transform: translateX(-880px);
   }
 }
+
+.workCard:hover {
+  .linkButton {
+    pointer-events: all !important;
+    opacity: 1 !important;
+  }
+}

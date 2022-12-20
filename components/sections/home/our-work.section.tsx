@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+import ArrowRightFilledIcon from 'components/icons/arrow-right-filled';
 
 import styles from './home.module.scss';
 
@@ -44,27 +47,37 @@ const OurWorks = () => {
         Lorem Ipsum has been the industry&lsquo;s standard dummy text ever since
         the 1500s
       </p>
-      <div className="flex flex-wrap justify-around gap-8 lg:gap-12 w-full max-w-[1440px]">
+      <div className="flex flex-wrap justify-center gap-8 lg:gap-12 w-full max-w-[1440px]">
         {WORKS.map((work: OurWork, idx: number) => (
           <div
             key={idx}
             className={
-              'flex-grow flex flex-col items-start basis-1/3 p-6 flex-shrink-0 relative sm:min-h-[360px] min-w-[320px] max-w-[400px] aspect-[22/25] ' +
+              'flex-grow flex flex-col items-start basis-[calc(33.333333%-2rem)] lg:basis-[calc(33.333333%-3rem)] flex-shrink-0 relative sm:min-h-[360px] min-w-[320px] max-w-[430px] aspect-[22/25] cursor-pointer ' +
               styles.workCard
             }
           >
-            <Image
-              src={DummyWorkImg}
-              alt={work.title}
-              className="absolute inset-0 object-cover -z-10"
-              placeholder="blur"
-            />
-            <h3 className="text-[40px] text-white capitalize mb-3">
-              {work.title}
-            </h3>
-            <p className="text-white !leading-normal max-w-[264px]">
-              {work.body}
-            </p>
+            <Link href={work.href} className="p-6 h-full">
+              <div
+                className={
+                  'absolute top-6 right-6 opacity-0 transition-all ' +
+                  styles.linkButton
+                }
+              >
+                <ArrowRightFilledIcon size={28} />
+              </div>
+              <Image
+                src={DummyWorkImg}
+                alt={work.title}
+                className="absolute inset-0 object-cover -z-10 w-full"
+                placeholder="blur"
+              />
+              <h3 className="text-[40px] text-white capitalize mb-3 max-w-[360px]">
+                {work.title}
+              </h3>
+              <p className="text-white !leading-normal max-w-[264px]">
+                {work.body}
+              </p>
+            </Link>
           </div>
         ))}
       </div>

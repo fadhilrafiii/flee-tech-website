@@ -45,7 +45,7 @@ const OurInsights = () => {
   const slidesPerView = useMemo(() => {
     // > 1440 => 2.5
     if (clientWidth >= 1024)
-      return ((clientWidth > 1440 ? 1440 : clientWidth) - 360) / 439;
+      return ((clientWidth > 1440 ? 1440 : clientWidth) - 380) / 439;
     else if (clientWidth >= 480) return (clientWidth - 80) / 372;
     else return 1;
   }, [clientWidth]);
@@ -53,7 +53,7 @@ const OurInsights = () => {
   return (
     <section
       id="our-insight"
-      className="px-5 sm:px-10 lg:px-20 py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-14"
+      className="px-8 lg:px-20 py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-14"
     >
       <div className="lg:max-w-[260px]">
         <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-6 !leading-tight">
@@ -70,7 +70,7 @@ const OurInsights = () => {
         loopFillGroupWithBlank={true}
         centeredSlides={clientWidth < 480}
         freeMode={clientWidth >= 480}
-        className="!p-2 lg:!pl-10 max-w-[1080px] !m-0"
+        className="!p-2 lg:!ml-10 max-w-[1080px] !m-0"
         modules={[FreeMode]}
       >
         {INSIGHTS.map((ins: OurInsight, idx: number) => (
