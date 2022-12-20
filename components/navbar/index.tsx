@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext, useRef, useState } from 'react';
 
+import LogoIcon from 'components/icons/logo';
+
 import ScrollContext from 'shared/context/scroll.context';
 import WindowDimensionContext from 'shared/context/window-dimension.context';
-import { ScrollState } from 'types/scroll';
-import { WindowDimension } from 'types/window';
-
-import LogoIcon from 'components/icons/logo';
+import { ScrollState } from 'shared/types/scroll';
+import { WindowDimension } from 'shared/types/window';
 
 import Hamburger from './hamburger';
 

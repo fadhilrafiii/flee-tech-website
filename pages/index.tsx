@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import ContactUsSection from 'components/sections/home/contact-us.section';
 import Landing from 'components/sections/home/landing.section';
 import OurClient from 'components/sections/home/our-client.section';
 import OurInsights from 'components/sections/home/our-insight.section';
@@ -28,6 +29,7 @@ export default function Home() {
         <div className="border border-grey divide-y divide-grey">
           <OurWorks />
           <OurInsights />
+          <ContactUsSection />
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 import type { AppProps } from 'next/app';
 
 import { Inter, Lora } from '@next/font/google';
+
+import Footer from 'components/footer';
+import Navbar from 'components/navbar';
+
 import { ScrollContextProvider } from 'shared/context/scroll.context';
 import { WindowDimensionContextProvider } from 'shared/context/window-dimension.context';
 import useScroll from 'shared/hooks/use-scroll';
 import useWindowDimension from 'shared/hooks/use-window-dimension';
-
-import Navbar from 'components/navbar';
 
 import '../styles/globals.scss';
 
@@ -35,7 +37,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <ScrollContextProvider value={scrollState}>
         <div className={`${LORA_FONT.variable} ${INTER_FONT.variable}`}>
           <Navbar />
-          <Component {...pageProps} />
+          <main>
+            <Component {...pageProps} />
+          </main>
+          <Footer />
         </div>
       </ScrollContextProvider>
     </WindowDimensionContextProvider>

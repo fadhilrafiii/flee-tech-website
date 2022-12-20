@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { ScrollState } from 'types/scroll';
+import { ScrollState } from 'shared/types/scroll';
 
 const useScroll = () => {
   const [scrollState, setScrollState] = useState<ScrollState>({

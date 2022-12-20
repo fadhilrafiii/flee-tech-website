@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-import { WindowDimension } from 'types/window';
+import { WindowDimension } from 'shared/types/window';
 
 const WindowDimensionContext = createContext<WindowDimension>({
   height: 0,

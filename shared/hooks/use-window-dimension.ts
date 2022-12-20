@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { WindowDimension } from 'types/window';
+import { WindowDimension } from 'shared/types/window';
 
 const useWindowDimension = () => {
   const [windowDimension, setWindowDimension] = useState<WindowDimension>({

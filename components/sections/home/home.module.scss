@@ -171,3 +171,20 @@
     opacity: 1 !important;
   }
 }
+
+.buttonShadow {
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 2px;
+    left: 12px;
+    right: 12px;
+    border-radius: inherit;
+    background: transparent;
+    box-shadow: 0 8px 12px 4px rgba(0, 0, 0, 0.3);
+  }
+}

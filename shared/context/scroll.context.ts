@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-import { ScrollState } from 'types/scroll';
+import { ScrollState } from 'shared/types/scroll';
 
 const ScrollContext = createContext<ScrollState>({
   currentPageY: 0,

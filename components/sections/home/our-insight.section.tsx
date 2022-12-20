@@ -56,10 +56,10 @@ const OurInsights = () => {
       className="px-8 lg:px-20 py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-14"
     >
       <div className="lg:max-w-[260px]">
-        <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-6 !leading-tight">
+        <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-1 sm:mb-6 !leading-snug">
           our recent insight
         </h3>
-        <p className="text-center lg:text-left text-base text-primary">
+        <p className="text-center lg:text-left text-xs sm:text-base text-primary">
           Technology and Business Issues that Matters for Us All
         </p>
       </div>
@@ -75,7 +75,7 @@ const OurInsights = () => {
       >
         {INSIGHTS.map((ins: OurInsight, idx: number) => (
           <SwiperSlide key={idx}>
-            <div className="overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[320px] sm:min-w-[340px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
+            <div className="overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[258px] sm:min-w-[320px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
               <div className="aspect-[9/5] w-full relative select-none">
                 <Image
                   style={{

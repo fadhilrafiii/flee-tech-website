@@ -123,7 +123,7 @@ const OurServices = () => {
         We understand your unique problem need a unique solution, we deliver the
         best solution that solving your specific problem
       </p>
-      <div className="divide-y divide-white relative w-full overflow-hidden">
+      <div className="divide-y divide-white-50 relative w-full overflow-hidden">
         <div className="py-10 mb-14 flex flex-col gap-5 sm:gap-10 overflow-hidden w-full">
           <div className="w-full relative">
             <div
@@ -206,7 +206,7 @@ const OurServices = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white bg-primary">
+        <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white-50 bg-primary">
           {SERVICES.map(({ Icon, ...service }: OurService, idx: number) => (
             <div
               key={idx}

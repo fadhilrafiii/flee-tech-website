@@ -1,0 +1,14 @@
+.logo > svg {
+  @media (max-width: 768px) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.socialMediaIcon svg {
+  height: 16px;
+
+  @media (min-width: 768px) {
+    height: 24px;
+  }
+}
