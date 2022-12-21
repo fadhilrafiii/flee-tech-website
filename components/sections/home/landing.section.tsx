@@ -1,5 +1,9 @@
+import { useContext } from 'react';
+
 import ArrowDownIcon from 'components/icons/arrow-down';
 import LinkButton from 'components/link-button';
+
+import WindowDimensionContext from 'shared/context/window-dimension.context';
 
 import styles from './home.module.scss';
 
@@ -32,6 +36,12 @@ const LANDING_MENUS: LandingMenu[] = [
 ];
 
 const Landing = () => {
+  const { height: clientHeight } = useContext(WindowDimensionContext);
+
+  const scrollAfterLandingSection = () => {
+    window.scrollTo({ top: clientHeight });
+  };
+
   return (
     <section
       id="landing"
@@ -101,7 +111,11 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <span className="inset-x-center bottom-14 m-auto inline-block md:hidden p-4">
+      <span
+        className="inset-x-center bottom-14 m-auto inline-block md:hidden p-4"
+        role="button"
+        onClick={scrollAfterLandingSection}
+      >
         <ArrowDownIcon size={24} />
       </span>
     </section>
