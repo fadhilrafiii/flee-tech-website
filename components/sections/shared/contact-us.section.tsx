@@ -12,7 +12,7 @@ const ContactUsSection = () => {
         <h2 className="text-center text-black capitalize text-2xl sm:text-5xl !leading-snug">
           Ready to transform your business?
         </h2>
-        <h2 className="text-center text-black-50 capitalize text-2xl sm:text-5xl !leading-snug mb-5 sm:mb-10">
+        <h2 className="text-center text-black-50 capitalize text-3xl sm:text-5xl !leading-snug mb-5 sm:mb-10">
           Explore the faster way to get software done
         </h2>
         <Link
