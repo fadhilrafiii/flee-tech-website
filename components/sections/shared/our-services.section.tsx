@@ -1,15 +1,15 @@
 import Image, { StaticImageData } from 'next/image';
 import React, { FC } from 'react';
 
-import { Colors } from 'shared/constants/colors';
-
 import DevicesOutlineIcon from 'components/icons/devices-outline';
 import PencilRulerOutlineIcon from 'components/icons/pencil-ruler-outline';
 import { IconProps } from 'components/icons/utils';
 import WebCodeOutlineIcon from 'components/icons/web-code-outline';
 import LinkButton from 'components/link-button';
 
-import styles from './home.module.scss';
+import { Colors } from 'shared/constants/colors';
+
+import styles from './shared-section.module.scss';
 
 import DailyAppImg from 'public/images/daily-app.jpg';
 import ImbdLikeImg from 'public/images/imbd-like.jpg';

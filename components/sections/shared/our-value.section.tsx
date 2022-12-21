@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
-import { Colors } from 'shared/constants/colors';
-
 import ChemicalOutlineIcon from 'components/icons/chemical-outline';
 import SearchDocumentOutlineIcon from 'components/icons/search-document-outline';
 import StackOutlineIcon from 'components/icons/stack-outline';
 import { IconProps } from 'components/icons/utils';
 
-import styles from './home.module.scss';
+import { Colors } from 'shared/constants/colors';
+
+import styles from './shared-section.module.scss';
 
 interface OurValue {
   Icon: FC<IconProps>;
@@ -37,21 +37,34 @@ const VALUES: OurValue[] = [
   },
 ];
 
-const OurValues = () => {
+interface OurValuesProps {
+  forAboutPage?: boolean;
+}
+
+const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
   return (
     <section id="our-value" className="divide-y divide-grey">
       <div className="flex flex-col justify-center items-center py-10 sm:py-28 px-8">
         <div className="text-sm sm:text-xl tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
           Greeting, we are flee tech
         </div>
-        <h2
-          style={{ lineHeight: 1.33 }}
-          className="capitalize font-medium text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1164px] text-center"
-        >
-          People don&lsquo;t like nonsense technology term, they want results.
-          so we don’t just do a software, we deliver the result simply by paying
-          attention to your business, design, and quality.
-        </h2>
+        {forAboutPage ? (
+          <h2
+            style={{ lineHeight: 1.33 }}
+            className="capitalize font-medium text-4xl md:text-6xl text-primary text-center max-w-[642px]"
+          >
+            We more then just building software
+          </h2>
+        ) : (
+          <h2
+            style={{ lineHeight: 1.33 }}
+            className="capitalize font-medium text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1164px] text-center"
+          >
+            People don&lsquo;t like nonsense technology term, they want results.
+            so we don’t just do a software, we deliver the result simply by
+            paying attention to your business, design, and quality.
+          </h2>
+        )}
       </div>
       <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-grey">
         {VALUES.map(({ Icon, ...value }: OurValue, idx: number) => (

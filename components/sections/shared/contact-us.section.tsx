@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from './home.module.scss';
+import styles from './shared-section.module.scss';
 
 const ContactUsSection = () => {
   return (

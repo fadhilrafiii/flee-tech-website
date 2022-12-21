@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import FacebookOutlineIcon from 'components/icons/facebook-outline';
+// import FacebookOutlineIcon from 'components/icons/facebook-outline';
 import InstagramOutlineIcon from 'components/icons/instagram-outline';
 import LinkedinOutlineIcon from 'components/icons/linkedin-outline';
 import LogoIcon from 'components/icons/logo';
@@ -110,9 +110,9 @@ const Footer = () => {
           <Link href="/" className={styles.socialMediaIcon}>
             <WhatsappOutlineIcon color="#333333" />
           </Link>
-          <Link href="/" className={styles.socialMediaIcon}>
+          {/* <Link href="/" className={styles.socialMediaIcon}>
             <FacebookOutlineIcon color="#333333" />
-          </Link>
+          </Link> */}
           <Link href="/" className={styles.socialMediaIcon}>
             <LinkedinOutlineIcon color="#333333" />
           </Link>
