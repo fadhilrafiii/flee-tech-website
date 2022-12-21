@@ -79,7 +79,7 @@ const OurWorks = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
       >
         {WORKS.map((work: WorkCardType, idx: number) => (
           <SwiperSlide key={idx}>
