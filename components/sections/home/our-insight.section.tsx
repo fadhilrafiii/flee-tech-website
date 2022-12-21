@@ -1,8 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
 import { useContext, useMemo } from 'react';
 
-import { FreeMode } from 'swiper';
+import { Autoplay, FreeMode, Pagination } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import LinkButton from 'components/link-button';
@@ -43,8 +44,19 @@ const INSIGHTS: OurInsight[] = [
 const OurInsights = () => {
   const { width: clientWidth } = useContext(WindowDimensionContext);
 
+  const swiperModules = useMemo(() => {
+    if (clientWidth < 480) return [FreeMode, Autoplay, Pagination];
+    else return [FreeMode, Autoplay];
+  }, [clientWidth]);
+
+  const paginationConfig = useMemo(() => {
+    if (clientWidth < 480)
+      return {
+        clickable: true,
+      };
+  }, [clientWidth]);
+
   const slidesPerView = useMemo(() => {
-    // > 1440 => 2.5
     if (clientWidth >= 1024)
       return ((clientWidth > 1440 ? 1440 : clientWidth) - 380) / 439;
     else if (clientWidth >= 480) return (clientWidth - 80) / 372;
@@ -54,10 +66,10 @@ const OurInsights = () => {
   return (
     <section
       id="our-insight"
-      className="px-8 lg:px-20 py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12"
+      className="px-8 lg:px-20 py-10 sm:py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12 gap-y-8 md:gap-y-12"
     >
       <div className="lg:max-w-[300px]">
-        <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-1 sm:mb-6 !leading-snug">
+        <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-2 sm:mb-6 !leading-snug">
           our recent insight
         </h3>
         <p className="text-center lg:text-left text-xs sm:text-base text-primary">
@@ -67,12 +79,17 @@ const OurInsights = () => {
       <Swiper
         slidesPerView={slidesPerView}
         spaceBetween={clientWidth > 1024 ? 56 : 20}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
         loop={true}
         loopFillGroupWithBlank={true}
         centeredSlides={clientWidth < 480}
         freeMode={clientWidth >= 480}
-        className="!p-2 lg:!ml-10 max-w-[1080px] !m-0"
-        modules={[FreeMode]}
+        className="!p-2 !pb-16 sm:!pb-2 lg:!ml-10 max-w-[1080px] !m-0"
+        pagination={paginationConfig}
+        modules={swiperModules}
       >
         {INSIGHTS.map((ins: OurInsight, idx: number) => (
           <SwiperSlide key={idx}>

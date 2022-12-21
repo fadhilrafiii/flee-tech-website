@@ -55,9 +55,10 @@ const Landing = () => {
       <div className="relative w-full p-11 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[60vh]">
         <h1
           className={
-            'text-white text-[2.75rem] sm:text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] ' +
+            'text-white text-[2.75rem] sm:text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] pb-12 md:pb-0 ' +
             styles.landingHeading
           }
+          pb-12
         >
           We solve problem for design & develop software to increase your
           business value
@@ -100,7 +101,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <span className="inset-x-center bottom-0 m-auto inline-block md:hidden p-4">
+      <span className="inset-x-center bottom-12 m-auto inline-block md:hidden p-4">
         <ArrowDownIcon size={24} />
       </span>
     </section>
