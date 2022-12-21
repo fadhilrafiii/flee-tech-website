@@ -19,15 +19,6 @@ const AboutUs = () => {
         <div className="border-b-2 border-grey">
           <ContactUsSection />
         </div>
-        {/* <div className="border border-grey divide-y divide-grey">
-      <OurClient />
-      <OurValues />
-    </div>
-    <OurServices />
-      <OurWorks />
-      <OurInsights />
-      <ContactUsSection />
-    </div> */}
       </div>
     </>
   );

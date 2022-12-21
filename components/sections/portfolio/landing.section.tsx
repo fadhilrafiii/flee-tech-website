@@ -10,7 +10,7 @@ const Landing = () => {
     >
       <Image
         src={SpaceImg}
-        alt="About Us | Flee Tech"
+        alt="Porfolio | Flee Tech"
         fill
         quality={100}
         className="absolute inset-0 -z-10"
@@ -22,10 +22,11 @@ const Landing = () => {
         }
         pb-12
       >
-        we are flee tech
+        Featured Work
       </h1>
-      <p className="capitalize text-white text-center text-2xl sm:text-[30px] max-w-[824px] mx-auto">
-        we design and build custom solution for your business
+      <p className="capitalize text-white text-center text-2xl sm:text-[30px] max-w-[824px] mx-auto !leadin">
+        We’d like to feature all our project, but here are some that really show
+        off what we do
       </p>
     </section>
   );

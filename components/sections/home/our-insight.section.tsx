@@ -93,7 +93,7 @@ const OurInsights = () => {
       >
         {INSIGHTS.map((ins: OurInsight, idx: number) => (
           <SwiperSlide key={idx}>
-            <div className="overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[258px] sm:min-w-[320px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
+            <div className="overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[240px] xs:min-w-[258px] sm:min-w-[320px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
               <div className="aspect-[9/5] w-full relative select-none">
                 <Image
                   style={{
@@ -108,7 +108,7 @@ const OurInsights = () => {
                 <span className="leading-loose text-grey text-xs">
                   {ins.date}
                 </span>
-                <h3 className="text-3xl lg:text-[40px] text-black capitalize !leading-snug mb-4">
+                <h3 className="text-2xl xs:text-3xl lg:text-[40px] text-black capitalize !leading-snug mb-4">
                   {ins.title}
                 </h3>
                 <LinkButton

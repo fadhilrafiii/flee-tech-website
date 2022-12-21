@@ -65,7 +65,7 @@ const Landing = () => {
       <div className="relative w-full p-11 lg:p-10 flex-grow flex flex-col justify-center items-center lg:items-start min-h-[60vh]">
         <h1
           className={
-            'text-white text-[2.75rem] sm:text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] pb-12 md:pb-0 ' +
+            'text-white text-4xl xs:text-[2.75rem] sm:text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] pb-12 md:pb-0 ' +
             styles.landingHeading
           }
           pb-12

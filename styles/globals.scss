@@ -13,6 +13,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 main {
@@ -50,4 +51,8 @@ img {
 
 .swiper-pagination-bullet-active {
   background-color: var(--grey-color) !important;
+}
+
+.swiper-slide {
+  height: auto !important;
 }

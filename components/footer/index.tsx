@@ -19,7 +19,7 @@ import styles from './footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer className="px-6 sm:px-10 pt-6 md:pt-16 pb-3 md:pb-7 flex flex-col">
+    <footer className="px-6 sm:px-10 pt-6 md:pt-16 pb-3 md:pb-7 flex flex-col overflow-hidden">
       <div className="flex flex-wrap pb-6 md:pb-12">
         <div className="basis-1/2 flex-grow">
           <div
@@ -43,14 +43,14 @@ const Footer = () => {
         </div>
         <div className="flex basis-1/2 pt-4 flex-grow">
           <div className="flex basis-1/3 flex-col">
-            <span className="text-black pr-4 mb-3 capitalize font-bold text-sm md:text-xl">
+            <span className="text-black pr-4 mb-3 capitalize font-bold text-[13px] md:text-xl">
               Technologies
             </span>
             {TECHNOLOGY_LINKS_1.map((link: FooterLink) => (
               <Link
                 href={link.href}
                 key={link.name}
-                className="pr-4 capitalize mb-3 text-grey text-sm md:text-xl"
+                className="pr-4 capitalize mb-3 text-grey text-[13px] md:text-xl"
               >
                 {link.name}
               </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <Link
                 href={link.href}
                 key={link.name}
-                className="pr-4 capitalize mb-3 text-grey text-sm md:text-xl"
+                className="pr-4 capitalize mb-3 text-grey text-[13px] md:text-xl"
               >
                 {link.name}
               </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="flex basis-1/3 flex-col">
             <Link
               href="/about-us"
-              className="text-black pr-4 mb-3 capitalize font-bold text-sm md:text-xl"
+              className="text-black pr-4 mb-3 capitalize font-bold text-[13px] md:text-xl"
             >
               About us
             </Link>
@@ -78,23 +78,23 @@ const Footer = () => {
               <Link
                 href={link.href}
                 key={link.name}
-                className="pr-4 capitalize mb-3 text-grey text-sm md:text-xl"
+                className="pr-4 capitalize mb-3 text-grey text-[13px] md:text-xl"
               >
                 {link.name}
               </Link>
             ))}
-            <span className="text-black pr-4 mb-8 capitalize font-bold text-sm md:text-xl">
+            <span className="text-black pr-4 mb-8 capitalize font-bold text-[13px] md:text-xl">
               {''}
             </span>
             <Link
               href="/portfolio"
-              className="text-black pr-4 mb-3 capitalize font-bold text-sm md:text-xl"
+              className="text-black pr-4 mb-3 capitalize font-bold text-[13px] md:text-xl"
             >
               Portfolio
             </Link>
             <Link
               href="/contact-us"
-              className="text-black pr-4 mb-3 capitalize font-bold text-sm md:text-xl"
+              className="text-black pr-4 mb-3 capitalize font-bold text-[13px] md:text-xl"
             >
               Contact us
             </Link>

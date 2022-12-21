@@ -51,14 +51,14 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
         {forAboutPage ? (
           <h2
             style={{ lineHeight: 1.33 }}
-            className="capitalize font-medium text-4xl md:text-6xl text-primary text-center max-w-[642px]"
+            className="capitalize font-medium text-3xl xs:text-4xl md:text-6xl text-primary text-center max-w-[642px]"
           >
             We more then just building software
           </h2>
         ) : (
           <h2
             style={{ lineHeight: 1.33 }}
-            className="capitalize font-medium text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1164px] text-center"
+            className="capitalize font-medium text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1164px] text-center"
           >
             People don&lsquo;t like nonsense technology term, they want results.
             so we don’t just do a software, we deliver the result simply by

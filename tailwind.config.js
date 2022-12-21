@@ -5,6 +5,7 @@ module.exports = {
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
     screens: {
+      xs: '350px',
       sm: '480px',
       md: '768px',
       lg: '1024px',
@@ -19,6 +20,7 @@ module.exports = {
       'white-75': 'rgba(255, 255, 255, 0.75)',
       'white-50': 'rgba(255, 255, 255, 0.5)',
       'dark-grey': '#4A4A4A',
+      'darker-grey': '#333333',
       grey: '#999494',
     },
     fontFamily: {
