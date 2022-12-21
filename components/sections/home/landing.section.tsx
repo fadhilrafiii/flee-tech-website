@@ -81,7 +81,7 @@ const Landing = () => {
             styles.landingBigBoxMenu
           }
         >
-          <h3 className="text-white text-3xl mb-14">
+          <h3 className="text-white text-3xl mb-14 font-secondary">
             Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus ut
             morbi egestas.
           </h3>
