@@ -101,7 +101,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <span className="inset-x-center bottom-12 m-auto inline-block md:hidden p-4">
+      <span className="inset-x-center bottom-14 m-auto inline-block md:hidden p-4">
         <ArrowDownIcon size={24} />
       </span>
     </section>
