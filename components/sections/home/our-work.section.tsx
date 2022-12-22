@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react';
 
-import { Autoplay, FreeMode, Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,13 +40,25 @@ const WORKS: WorkCardType[] = [
 ];
 
 const OurWorks = () => {
-  const { width: clientWidth } = useContext(WindowDimensionContext);
+  const { height: isWindowReady } = useContext(WindowDimensionContext);
 
-  const slidesPerView = useMemo(() => {
-    if (clientWidth >= 1720) return 3;
-    if (clientWidth >= 1200) return 2;
-    return 1;
-  }, [clientWidth]);
+  const workSwiperBreakpoints = useMemo(
+    () => ({
+      480: {
+        centeredSlides: false,
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 44,
+      },
+      1720: {
+        slidesPerView: 3,
+      },
+    }),
+    [],
+  );
+
+  if (!isWindowReady) return null;
 
   return (
     <section
@@ -65,21 +77,18 @@ const OurWorks = () => {
       </p>
 
       <Swiper
-        slidesPerView={slidesPerView}
-        spaceBetween={clientWidth > 1024 ? 44 : 20}
+        slidesPerView={1}
+        spaceBetween={20}
         autoplay={{
           delay: 2000,
           disableOnInteraction: true,
         }}
+        centeredSlides
         loop={true}
         loopFillGroupWithBlank={true}
-        centeredSlides={clientWidth < 480}
-        freeMode={clientWidth >= 480}
         className="!p-2 !pb-16 w-full max-w-[1650px] !m-0"
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, FreeMode, Pagination]}
+        modules={[Autoplay, Pagination]}
+        breakpoints={workSwiperBreakpoints}
       >
         {WORKS.map((work: WorkCardType, idx: number) => (
           <SwiperSlide key={idx}>

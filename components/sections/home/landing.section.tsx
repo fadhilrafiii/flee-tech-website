@@ -68,7 +68,6 @@ const Landing = () => {
             'text-white text-4xl xs:text-[2.75rem] sm:text-5xl lg:text-6xl text-center lg:text-left capitalize md:max-w-[758px] my-auto md:pt-[86px] pb-12 md:pb-0 ' +
             styles.landingHeading
           }
-          pb-12
         >
           We solve problem for design & develop software to increase your
           business value

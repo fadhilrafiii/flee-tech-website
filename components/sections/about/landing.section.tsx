@@ -20,7 +20,6 @@ const Landing = () => {
         className={
           'text-white text-[2.75rem] sm:text-5xl lg:text-6xl underline underline-offset-[12px] sm:underline-offset-[24px] !leading-normal decoration-white-50 decoration-1 mb-4 sm:mb-7 capitalize md:max-w-[758px] mx-auto text-center'
         }
-        pb-12
       >
         we are flee tech
       </h1>
