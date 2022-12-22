@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react';
 
-import { Autoplay, Pagination } from 'swiper';
+import { Autoplay, FreeMode, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -79,7 +79,7 @@ const OurWorks = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, FreeMode, Pagination]}
       >
         {WORKS.map((work: WorkCardType, idx: number) => (
           <SwiperSlide key={idx}>
