@@ -83,9 +83,9 @@ const OurWorks = () => {
           delay: 2000,
           disableOnInteraction: true,
         }}
-        centeredSlides
-        loop={true}
-        loopFillGroupWithBlank={true}
+        loop
+        loopFillGroupWithBlank
+        pagination
         className="!p-2 !pb-16 w-full max-w-[1650px] !m-0"
         modules={[Autoplay, Pagination]}
         breakpoints={workSwiperBreakpoints}
