@@ -5,7 +5,7 @@ import { WorkCardType } from 'shared/types/work';
 const WorkCard = ({ image, title, subtitle, onClick }: WorkCardType) => {
   return (
     <div
-      className="overflow-hidden drop-shadow-xl rounded-[10px] bg-white w-full max-w-[575px] min-w-[280px] mx-auto h-full"
+      className="overflow-hidden rounded-[10px] bg-white w-full max-w-[575px] min-w-[280px] mx-auto h-full"
       role="button"
       onClick={onClick}
     >
