@@ -2,10 +2,15 @@ import Image from 'next/image';
 
 import { WorkCardType } from 'shared/types/work';
 
+import styles from './work-card.module.scss';
+
 const WorkCard = ({ image, title, subtitle, onClick }: WorkCardType) => {
   return (
     <div
-      className="overflow-hidden rounded-[10px] bg-white w-full max-w-[575px] min-w-[280px] mx-auto h-full"
+      className={
+        'overflow-hidden rounded-[10px] bg-white w-full max-w-[575px] min-w-[280px] mx-auto h-full ' +
+        styles.cardBoxShadow
+      }
       role="button"
       onClick={onClick}
     >
