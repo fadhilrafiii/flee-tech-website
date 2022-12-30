@@ -82,8 +82,7 @@ const OurWorks = () => {
         slidesPerView={1}
         spaceBetween={20}
         autoplay={{
-          delay: 2000,
-          disableOnInteraction: true,
+          delay: 1500,
         }}
         loop
         loopFillGroupWithBlank

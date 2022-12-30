@@ -80,8 +80,7 @@ const OurInsights = () => {
         slidesPerView={slidesPerView}
         spaceBetween={clientWidth > 1024 ? 56 : 20}
         autoplay={{
-          delay: 2000,
-          disableOnInteraction: true,
+          delay: 2500,
         }}
         loop={true}
         loopFillGroupWithBlank={true}
