@@ -6,13 +6,13 @@ const ContactUsSection = () => {
   return (
     <section
       id="contact-us"
-      className="px-14 md:px-20 py-10 md:py-20 flex flex-col justify-center items-center min-h-[64vh]"
+      className="px-7 sm:px-14 md:px-20 py-10 md:py-20 flex flex-col justify-center items-center min-h-[64vh]"
     >
       <div className="flex flex-col justify-center items-center max-w-[812px]">
-        <h2 className="text-center text-black capitalize text-3xl sm:text-5xl !leading-snug">
+        <h2 className="text-center text-black capitalize text-2xl sm:text-3xl md:text-5xl !leading-snug">
           Ready to transform your business?
         </h2>
-        <h2 className="text-center text-black-50 capitalize text-3xl sm:text-5xl !leading-snug mb-5 sm:mb-10">
+        <h2 className="text-center text-black-50 capitalize text-2xl sm:text-3xl md:text-5xl !leading-snug mb-5 sm:mb-10">
           Explore the faster way to get software done
         </h2>
         <Link

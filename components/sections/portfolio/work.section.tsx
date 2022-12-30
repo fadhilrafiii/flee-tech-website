@@ -1,10 +1,12 @@
+import { useRouter } from 'next/router';
+
 import WorkCard from 'components/work-card';
 
-import { WorkCardType } from 'shared/types/work';
+import { WorkType } from 'shared/types/work';
 
 import SpaceImage from 'public/images/space.jpg';
 
-const WORKS: WorkCardType[] = [
+const WORKS: WorkType[] = [
   {
     image: SpaceImage,
     title: 'Al-Hadi Boarding School',
@@ -32,12 +34,14 @@ const WORKS: WorkCardType[] = [
 ];
 
 const WorkSection = () => {
+  const router = useRouter();
+
   return (
     <section
       id="work"
       className="flex lg:flex-wrap flex-col lg:flex-row justify-center gap-12 xl:gap-20 px-6 py-12 md:p-20"
     >
-      {WORKS.map((work: WorkCardType) => (
+      {WORKS.map((work: WorkType) => (
         <div
           key={work.title}
           className="basis-[calc(50%-24px)] xl:basis-[calc(50%-40px)] flex-shrink max-w-[575px]"
@@ -47,6 +51,7 @@ const WorkSection = () => {
             subtitle={work.subtitle}
             image={SpaceImage}
             href={work.href}
+            onClick={() => router.push(work.href)}
           />
         </div>
       ))}

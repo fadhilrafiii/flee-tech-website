@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { useContext, useMemo } from 'react';
 
 import { Autoplay, Pagination } from 'swiper';
@@ -8,11 +9,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import WorkCard from 'components/work-card';
 
 import WindowDimensionContext from 'shared/context/window-dimension.context';
-import { WorkCardType } from 'shared/types/work';
+import { WorkType } from 'shared/types/work';
 
 import SpaceImage from 'public/images/space.jpg';
 
-const WORKS: WorkCardType[] = [
+const WORKS: WorkType[] = [
   {
     image: SpaceImage,
     title: 'Al-Hadi Boarding School',
@@ -40,6 +41,7 @@ const WORKS: WorkCardType[] = [
 ];
 
 const OurWorks = () => {
+  const router = useRouter();
   const { height: isWindowReady } = useContext(WindowDimensionContext);
 
   const workSwiperBreakpoints = useMemo(
@@ -90,13 +92,14 @@ const OurWorks = () => {
         modules={[Autoplay, Pagination]}
         breakpoints={workSwiperBreakpoints}
       >
-        {WORKS.map((work: WorkCardType, idx: number) => (
+        {WORKS.map((work: WorkType, idx: number) => (
           <SwiperSlide key={idx}>
             <WorkCard
               title={work.title}
               subtitle={work.subtitle}
               image={work.image}
               href={work.href}
+              onClick={() => router.push(work.href)}
             />
           </SwiperSlide>
         ))}
