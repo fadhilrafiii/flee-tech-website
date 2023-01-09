@@ -14,6 +14,7 @@ module.exports = {
     colors: {
       primary: '#01033D',
       black: '#000000',
+      'black-80': 'rgba(0, 0, 0, 0.8)',
       'black-50': 'rgba(0, 0, 0, 0.5)',
       'black-30': 'rgba(0, 0, 0, 0.3)',
       white: '#ffffff',

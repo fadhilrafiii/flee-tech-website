@@ -90,19 +90,19 @@ const SERVICES: OurService[] = [
   {
     Icon: PencilRulerOutlineIcon,
     title: 'UI/UX design',
-    body: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+    body: 'An approach to web and product design that focuses on creating designs that encourage users to take a desired action',
     href: '/',
   },
   {
     Icon: WebCodeOutlineIcon,
     title: 'Web Development',
-    body: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+    body: 'Creating custom websites that are designed to generate leads and increase sales.',
     href: '/',
   },
   {
     Icon: DevicesOutlineIcon,
     title: 'App Development',
-    body: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+    body: 'Enhancing the flexibility and speed of your business operations through the use of scalable enterprise applications',
     href: '/',
   },
 ];
@@ -113,18 +113,19 @@ const OurServices = () => {
       id="our-services"
       className="pt-14 bg-primary flex flex-col items-center"
     >
-      <div className=" text-sm sm:text-xl text-center uppercase text-white-75 tracking-[2px] sm:tracking-[6px] px-6 mb-3">
+      <div className=" text-sm sm:text-base text-center uppercase text-white tracking-[2px] sm:tracking-[6px] px-6 mb-3">
         services
       </div>
-      <h2 className="capitalize text-4xl md:text-6xl px-6 text-white mb-4 text-center">
+      <h2 className="capitalize text-4xl md:text-6xl px-6 text-white mb-4 text-center !leading-snug">
         create custom solutions
       </h2>
-      <p className="text-sm sm:text-base text-white text-center max-w-[632px] px-6">
-        We understand your unique problem need a unique solution, we deliver the
-        best solution that solving your specific problem
+      <p className="text-sm sm:text-base text-white text-center max-w-[800px] px-6">
+        We believe that the power of design, creativity, and emotion helps
+        businesses to involve people in their products and services, multiplying
+        their consumer characteristics
       </p>
       <div className="divide-y divide-white-50 relative w-full overflow-hidden">
-        <div className="py-10 mb-14 flex flex-col gap-5 sm:gap-10 overflow-hidden w-full">
+        <div className="py-12 mb-14 flex flex-col gap-5 sm:gap-10 overflow-hidden w-full">
           <div className="w-full relative">
             <div
               className={'flex gap-5 sm:gap-10 ' + styles.projectScrollLeft1}
@@ -210,7 +211,7 @@ const OurServices = () => {
           {SERVICES.map(({ Icon, ...service }: OurService, idx: number) => (
             <div
               key={idx}
-              className="py-10 sm:py-16 lg:py-20 px-10 md:px-8 lg:px-12 basis-1/3 flex flex-col items-center justify-between"
+              className="p-10 md:p-12 lg:p-16 md:px-8 lg:px-12 basis-1/3 flex flex-col items-center justify-between"
             >
               <div className={'mb-6 sm:mb-11 ' + styles.serviceIcon}>
                 <Icon size={64} color={Colors.White} />

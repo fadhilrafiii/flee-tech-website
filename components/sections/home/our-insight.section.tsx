@@ -93,7 +93,7 @@ const OurInsights = () => {
         {INSIGHTS.map((ins: OurInsight, idx: number) => (
           <SwiperSlide key={idx}>
             <div className="overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[240px] xs:min-w-[258px] sm:min-w-[320px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
-              <div className="aspect-[9/5] w-full relative select-none">
+              <div className="aspect-[47/33] w-full relative select-none">
                 <Image
                   style={{
                     objectFit: 'cover',

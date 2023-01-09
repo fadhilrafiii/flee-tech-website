@@ -4,6 +4,7 @@ import { useContext, useRef, useState } from 'react';
 
 import LogoIcon from 'components/icons/logo';
 
+import { Colors } from 'shared/constants/colors';
 import ScrollContext from 'shared/context/scroll.context';
 import WindowDimensionContext from 'shared/context/window-dimension.context';
 import { ScrollState } from 'shared/types/scroll';
@@ -46,6 +47,8 @@ const Navbar = () => {
   const { pathname } = useRouter();
   const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);
 
+  const isWorkPage = pathname.split('/')[1] === 'work';
+
   const onToggleMenu = (state: boolean) => {
     if (menuRef && menuRef.current) {
       if (!state) {
@@ -70,19 +73,27 @@ const Navbar = () => {
       } ${
         currentPageY < prevPageY && currentPageY > clientHeight
           ? 'bg-primary bg-opacity-50'
+          : isWorkPage
+          ? 'bg-white'
           : ''
-      } left-0 right-0 py-4 sm:py-8 px-5 sm:px-11 z-20 items-center w-full transition-all duration-300 will-change-[opacity]`}
+      }
+      } left-0 right-0 py-4 sm:py-7 px-5 sm:px-11 z-20 items-center w-full transition-all duration-300 will-change-[opacity]`}
     >
       <Link
         href="/"
         onClick={() => onToggleMenu(false)}
         className={'flex gap-3 items-center z-10 ' + styles.logo}
       >
-        <LogoIcon size={36} />
+        <LogoIcon
+          size={36}
+          color={isWorkPage ? Colors.Primary : Colors.White}
+        />
         <span
           role="button"
           aria-label="Flee Tech"
-          className="text-white text-xl md:text-3xl"
+          className={`${
+            isWorkPage ? 'text-primary' : 'text-white'
+          } text-xl md:text-3xl`}
         >
           Flee Tech
         </span>
@@ -99,7 +110,9 @@ const Navbar = () => {
             key={menu.href}
             className={`${
               menu.href === '/' ? 'md:hidden' : ''
-            } flex overflow-hidden text-white text-4xl md:text-2xl rounded-[2.5rem] md:rounded-3xl ${
+            } flex overflow-hidden ${
+              isWorkPage ? 'text-primary' : 'text-white'
+            } text-4xl md:text-2xl rounded-[2.5rem] md:rounded-3xl ${
               pathname === menu.href ? ' border-1-white-10' : ''
             }`}
           >
@@ -107,7 +120,7 @@ const Navbar = () => {
               href={menu.href}
               className={`py-3 md:py-2 px-8 md:px-7 ${
                 pathname === menu.href ? 'bg-gradient-white-50-0' : ''
-              }`}
+              } font-medium`}
               onClick={() => onToggleMenu(false)}
             >
               {menu.label}

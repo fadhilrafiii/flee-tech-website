@@ -8,39 +8,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import WorkCard from 'components/work-card';
 
+import { WORKS as _WORKS } from 'shared/constants/works';
 import WindowDimensionContext from 'shared/context/window-dimension.context';
-import { WorkType } from 'shared/types/work';
+import { Work } from 'shared/types/work';
+import { getURLParamsString } from 'shared/utils/string';
 
-import SpaceImage from 'public/images/space.jpg';
+const WORKS = _WORKS.filter(
+  (work: Work) => work.title !== 'Adelia Frozen Food',
+);
 
-const WORKS: WorkType[] = [
-  {
-    image: SpaceImage,
-    title: 'Al-Hadi Boarding School',
-    subtitle: 'academic system web application',
-    href: '/',
-  },
-  {
-    image: SpaceImage,
-    title: 'instant web template',
-    subtitle: 'websites for various industry',
-    href: '/',
-  },
-  {
-    image: SpaceImage,
-    title: 'Jinx Board',
-    subtitle: 'geothermal superapp dashboard',
-    href: '/',
-  },
-  {
-    image: SpaceImage,
-    title: 'Mentor - mencari tutor',
-    subtitle: 'mobile app development',
-    href: '/',
-  },
-];
+interface OurWorksProps {
+  inWorkPage?: boolean;
+  works?: Work[];
+}
 
-const OurWorks = () => {
+const OurWorks = ({ inWorkPage, works = WORKS }: OurWorksProps) => {
   const router = useRouter();
   const { height: isWindowReady } = useContext(WindowDimensionContext);
 
@@ -67,15 +49,16 @@ const OurWorks = () => {
       id="our-work"
       className="py-12 md:py-20 px-8 lg:px-12 flex flex-col items-center justify-center"
     >
-      <div className="text-center text-sm sm:text-xl uppercase text-primary tracking-[2px] sm:tracking-[6px] px-6 mb-3">
+      <div className="text-center text-sm sm:text-base uppercase text-primary tracking-[2px] sm:tracking-[6px] px-6 mb-3">
         work / review
       </div>
-      <h2 className="text-primary text-4xl md:text-6xl mb-4 text-center capitalize">
-        Lorem Ipsum
+      <h2 className="text-primary text-4xl md:text-6xl mb-4 text-center capitalize !leading-snug">
+        {inWorkPage ? 'another' : 'the'} highlight
       </h2>
-      <p className="text-base text-primary text-center mb-9">
-        Lorem Ipsum has been the industry&lsquo;s standard dummy text ever since
-        the 1500s
+      <p className="text-xs md:text-base text-primary text-center mb-9 max-w-[826px]">
+        We help our enterprise clients drive business value through the use of
+        cutting-edge technology. Explore our work to see how technology can help
+        transform your business
       </p>
 
       <Swiper
@@ -91,14 +74,13 @@ const OurWorks = () => {
         modules={[Autoplay, Pagination]}
         breakpoints={workSwiperBreakpoints}
       >
-        {WORKS.map((work: WorkType, idx: number) => (
+        {works.map((work: Work, idx: number) => (
           <SwiperSlide key={idx}>
             <WorkCard
-              title={work.title}
-              subtitle={work.subtitle}
-              image={work.image}
-              href={work.href}
-              onClick={() => router.push(work.href)}
+              work={work}
+              onClick={() =>
+                router.push(`/work/${getURLParamsString(work.title)}`)
+              }
             />
           </SwiperSlide>
         ))}

@@ -1,12 +1,25 @@
 import { StaticImageData } from 'next/image';
 
-export interface WorkType {
+export interface WorkDetailImage {
+  aspectRatio: string;
+  src: string | StaticImageData;
+}
+
+export interface WorkDetailContent {
+  title: string;
+  paragraph?: string;
+}
+export interface WorkDetail {
+  align?: string;
+  image: WorkDetailImage;
+  content: WorkDetailContent;
+}
+export interface Work {
   image: StaticImageData | string;
+  banner: StaticImageData | string;
   title: string;
   subtitle: string;
   href: string;
-}
-
-export interface WorkCardType extends WorkType {
-  onClick: () => void;
+  desc?: string;
+  details?: WorkDetail[];
 }

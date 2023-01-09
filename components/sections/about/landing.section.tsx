@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <section
       id="landing"
-      className="h-screen max-h-[992px] flex flex-col items-center justify-center relative px-6"
+      className="h-[90vh] max-h-[992px] flex flex-col items-center justify-center relative px-6 bg-black-50"
     >
       <Image
         src={SpaceImg}

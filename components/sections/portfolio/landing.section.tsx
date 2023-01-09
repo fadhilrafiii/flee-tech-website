@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
-import SpaceImg from 'public/images/space.jpg';
+import FeatureWorkBanner from 'public/images/feature-work-banner.jpg';
 
 const Landing = () => {
   return (
     <section
       id="landing"
-      className="h-screen max-h-[992px] flex flex-col items-center justify-center relative px-6"
+      className="h-[90vh] max-h-[992px] flex flex-col items-center justify-center relative px-6 bg-black-50"
     >
       <Image
-        src={SpaceImg}
+        src={FeatureWorkBanner}
         alt="Porfolio | Flee Tech"
         fill
         quality={100}

@@ -1,19 +1,19 @@
 import Image from 'next/image';
 
-import SpaceImg from 'public/images/space.jpg';
+import ContactBannerImg from 'public/images/contact-banner.jpg';
 
 const Landing = () => {
   return (
     <section
       id="landing"
-      className="h-screen max-h-[992px] flex flex-col items-center justify-center relative px-6"
+      className="h-[90vh] max-h-[992px] flex flex-col items-center justify-center relative px-6 bg-black-50"
     >
       <Image
-        src={SpaceImg}
+        src={ContactBannerImg}
         alt="About Us | Flee Tech"
         fill
         quality={100}
-        className="absolute inset-0 -z-10 object-cover"
+        className="absolute inset-0 -z-10 object-cover object-top"
         priority
       />
       <h1

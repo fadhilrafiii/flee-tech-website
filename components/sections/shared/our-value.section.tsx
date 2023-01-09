@@ -19,21 +19,21 @@ interface OurValue {
 const VALUES: OurValue[] = [
   {
     Icon: ChemicalOutlineIcon,
-    label: 'first value',
-    title: 'lorem ipsum',
-    body: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    label: 'connection',
+    title: 'Dedicated Team',
+    body: 'Convenient and cost-effective solution for business who want to outsource certain tasks',
   },
   {
     Icon: SearchDocumentOutlineIcon,
-    label: 'second value',
-    title: 'lorem ipsum',
-    body: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    label: 'Communication',
+    title: 'Direct Communication',
+    body: 'Clear, open, and honest communication is the foundation of successful relationship and successful business',
   },
   {
     Icon: StackOutlineIcon,
-    label: 'third value',
-    title: 'lorem ipsum',
-    body: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    label: 'Expertise',
+    title: 'Crafted To Fit',
+    body: 'Creating tailored solutions for businesses based on company unique and challenges and goals in order to provide high quality and effective results',
   },
 ];
 
@@ -44,8 +44,8 @@ interface OurValuesProps {
 const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
   return (
     <section id="our-value" className="divide-y divide-grey">
-      <div className="flex flex-col justify-center items-center py-10 sm:py-28 px-8">
-        <div className="text-sm sm:text-xl tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
+      <div className="flex flex-col justify-center items-center py-10 sm:py-32 px-8">
+        <div className="text-sm sm:text-base tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
           Greeting, we are flee tech
         </div>
         {forAboutPage ? (
@@ -58,11 +58,11 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
         ) : (
           <h2
             style={{ lineHeight: 1.33 }}
-            className="capitalize font-medium text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1164px] text-center"
+            className="capitalize font-medium text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1082px] text-center"
           >
-            People don&lsquo;t like nonsense technology term, they want results.
-            so we don’t just do a software, we deliver the result simply by
-            paying attention to your business, design, and quality.
+            We prioritize delivering results over the software itself, and
+            approach development with a focus on quality, design, and meeting
+            the needs of your business
           </h2>
         )}
       </div>
@@ -78,7 +78,7 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
             <div className="tracking-[4px] lg:tracking-[6px] text-grey text-sm sm:text-lg lg:text-xl uppercase mb-4">
               {value.label}
             </div>
-            <h3 className="font-medium text-3xl sm:text-[40px] text-primary capitalize mb-6">
+            <h3 className="font-medium text-3xl sm:text-[40px] text-primary capitalize mb-6 !leading-snug">
               {value.title}
             </h3>
             <p className="text-sm sm:text-base text-black">{value.body}</p>

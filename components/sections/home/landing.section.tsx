@@ -69,7 +69,7 @@ const Landing = () => {
             styles.landingHeading
           }
         >
-          We solve problem for design & develop software to increase your
+          We solve problem for designing & developing software to increase your
           business value
         </h1>
       </div>

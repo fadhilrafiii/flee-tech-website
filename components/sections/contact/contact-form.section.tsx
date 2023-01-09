@@ -39,7 +39,7 @@ const ContactForm = () => {
         <input
           type="text"
           className={
-            'p-4 md:p-5 text-base md:text-2xl lg:text-3xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
+            'py-3 px-4 text-base md:text-xl lg:text-2xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
             styles.input
           }
           name="name"
@@ -51,7 +51,7 @@ const ContactForm = () => {
         <input
           type="email"
           className={
-            'p-4 md:p-5 text-base md:text-2xl lg:text-3xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
+            'py-3 px-4 text-base md:text-xl lg:text-2xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
             styles.input
           }
           name="email"
@@ -63,7 +63,7 @@ const ContactForm = () => {
         <input
           type="text"
           className={
-            'p-4 md:p-5 text-base md:text-2xl lg:text-3xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
+            'py-3 px-4 text-base md:text-xl lg:text-2xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
             styles.input
           }
           name="company"
@@ -74,7 +74,7 @@ const ContactForm = () => {
         />
         <textarea
           className={
-            'w-full p-4 md:p-5 text-base md:text-2xl lg:text-3xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
+            'w-full py-3 px-4 text-base md:text-xl lg:text-2xl border md:border-2 border-grey rounded-[6px] md:rounded-[10px] ' +
             styles.input
           }
           value={form.note}

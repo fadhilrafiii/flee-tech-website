@@ -59,8 +59,8 @@
     overflow: hidden;
     top: 2rem;
     right: 2.75rem;
-    left: calc(100vw - 2.75rem - 40px);
-    bottom: calc(100vh - 2rem - 40px);
+    left: calc(100vw - 2.75rem - 38px);
+    bottom: calc(100vh - 2rem - 38px);
 
     li {
       opacity: 0;
@@ -68,10 +68,14 @@
   }
 
   @media (max-width: 479px) {
-    top: 1rem;
-    right: 1.25rem;
-    left: calc(100vw - 1.25rem - 40px);
-    bottom: calc(100vh - 1rem - 40px);
+    top: calc(1rem + 1px);
+    right: calc(1.25rem + 1px);
+    left: calc(100vw - 1.25rem - 38px);
+    bottom: calc(100vh - 1rem - 38px);
+
+    li a {
+      color: white !important;
+    }
   }
 }
 
@@ -137,8 +141,8 @@
   0% {
     top: 2rem;
     right: 2.75rem;
-    left: calc(100vw - 2.75rem - 40px);
-    bottom: calc(100vh - 2rem - 40px);
+    left: calc(100vw - 2.75rem - 38px);
+    bottom: calc(100vh - 2rem - 38px);
   }
   50% {
     opacity: 0.5;
@@ -177,8 +181,8 @@
   100% {
     top: 2rem;
     right: 2.75rem;
-    left: calc(100vw - 2.75rem - 40px);
-    bottom: calc(100vh - 2rem - 40px);
+    left: calc(100vw - 2.75rem - 38px);
+    bottom: calc(100vh - 2rem - 38px);
     pointer-events: none;
   }
 }
@@ -187,8 +191,8 @@
   0% {
     top: 1rem;
     right: 1.25rem;
-    left: calc(100vw - 1.25rem - 40px);
-    bottom: calc(100vh - 1rem - 40px);
+    left: calc(100vw - 1.25rem - 38px);
+    bottom: calc(100vh - 1rem - 38px);
   }
   50% {
     opacity: 0.5;
@@ -227,8 +231,8 @@
   100% {
     top: 1rem;
     right: 1.25rem;
-    left: calc(100vw - 1.25rem - 40px);
-    bottom: calc(100vh - 1rem - 40px);
+    left: calc(100vw - 1.25rem - 38px);
+    bottom: calc(100vh - 1rem - 38px);
     pointer-events: none;
   }
 }
