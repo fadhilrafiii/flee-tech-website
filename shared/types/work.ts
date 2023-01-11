@@ -6,20 +6,24 @@ export interface WorkDetailImage {
 }
 
 export interface WorkDetailContent {
-  title: string;
+  title?: string;
   paragraph?: string;
 }
 export interface WorkDetail {
   align?: string;
-  image: WorkDetailImage;
+  highlightedColor?: string;
+  image?: WorkDetailImage;
   content: WorkDetailContent;
 }
+
 export interface Work {
   image: StaticImageData | string;
   banner: StaticImageData | string;
   title: string;
   subtitle: string;
-  href: string;
+  href?: string;
   desc?: string;
   details?: WorkDetail[];
+  client?: string;
+  url?: string;
 }

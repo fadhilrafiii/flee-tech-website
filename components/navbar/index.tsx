@@ -47,7 +47,7 @@ const Navbar = () => {
   const { pathname } = useRouter();
   const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);
 
-  const isWorkPage = pathname.split('/')[1] === 'work';
+  const isWhiteNavbar = ['work', 'technology'].includes(pathname.split('/')[1]);
 
   const onToggleMenu = (state: boolean) => {
     if (menuRef && menuRef.current) {
@@ -63,6 +63,8 @@ const Navbar = () => {
     }
   };
 
+  const isScrollingUp = currentPageY < prevPageY && currentPageY > clientHeight;
+
   return (
     <header
       className={`fixed flex justify-between ${
@@ -71,9 +73,9 @@ const Navbar = () => {
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100'
       } ${
-        currentPageY < prevPageY && currentPageY > clientHeight
+        isScrollingUp
           ? 'bg-primary bg-opacity-50'
-          : isWorkPage
+          : isWhiteNavbar
           ? 'bg-white'
           : ''
       }
@@ -86,13 +88,15 @@ const Navbar = () => {
       >
         <LogoIcon
           size={36}
-          color={isWorkPage ? Colors.Primary : Colors.White}
+          color={
+            isWhiteNavbar && !isScrollingUp ? Colors.Primary : Colors.White
+          }
         />
         <span
           role="button"
           aria-label="Flee Tech"
           className={`${
-            isWorkPage ? 'text-primary' : 'text-white'
+            isWhiteNavbar && !isScrollingUp ? 'text-primary' : 'text-white'
           } text-xl md:text-3xl`}
         >
           Flee Tech
@@ -111,7 +115,7 @@ const Navbar = () => {
             className={`${
               menu.href === '/' ? 'md:hidden' : ''
             } flex overflow-hidden ${
-              isWorkPage ? 'text-primary' : 'text-white'
+              isWhiteNavbar && !isScrollingUp ? 'text-primary' : 'text-white'
             } text-4xl md:text-2xl rounded-[2.5rem] md:rounded-3xl ${
               pathname === menu.href ? ' border-1-white-10' : ''
             }`}

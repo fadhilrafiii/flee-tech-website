@@ -6,23 +6,21 @@ const LTRWorkDetailSection = ({ content }: WorkDetailSectionProps) => {
   return (
     <section
       id={content.content.title}
-      className="flex flex-wrap items-center justify-between py-12 px-5 md:p-36 -mx-4 md:-mx-16 gap-y-6 sm:gap-y-8 "
+      className="flex flex-wrap items-center justify-between py-12 px-5 sm:p-20 xl:p-36 gap-y-6 sm:gap-y-12"
     >
-      <div className="flex-grow basis-7/12 px-4 md:px-16 md:min-w-[450px]">
-        <div
-          className={`overflow-hidden relative aspect-[${content.image.aspectRatio}]`}
-        >
+      {content.image && (
+        <div className="basis-7/12 lg:pr-10 xl:pr-16 flex-grow">
           <Image
             src={content.image.src}
-            alt={content.content.title}
+            alt={content.content.title || ''}
+            className="sm:min-w-[353.5px]"
             placeholder="blur"
-            fill
             sizes="(max-width: 480px) 100vw, 50vw"
           />
         </div>
-      </div>
-      <div className="px-4 md:px-16 basis-5/12 flex-shrink flex-grow">
-        <h2 className="text-darker-grey mb-3 md:mb-5 !leading-snug text-3xl sm:text-4xl">
+      )}
+      <div className="basis-5/12 min-w-[200px] flex-shrink flex-grow md:pl-8 lg:px-10">
+        <h2 className="text-darker-grey mb-3 md:mb-5 !leading-snug text-3xl sm:text-4xl capitalize">
           {content.content.title}
         </h2>
         {content.content.paragraph && (

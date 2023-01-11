@@ -47,19 +47,21 @@ const OurWorks = ({ inWorkPage, works = WORKS }: OurWorksProps) => {
   return (
     <section
       id="our-work"
-      className="py-12 md:py-20 px-8 lg:px-12 flex flex-col items-center justify-center"
+      className="py-12 md:py-20 px-2 sm:px-8 lg:px-12 flex flex-col items-center justify-center"
     >
-      <div className="text-center text-sm sm:text-base uppercase text-primary tracking-[2px] sm:tracking-[6px] px-6 mb-3">
-        work / review
+      <div className="px-4 sm:px-0">
+        <div className="text-center text-sm sm:text-base uppercase text-primary tracking-[2px] sm:tracking-[6px] px-6 mb-3">
+          work / review
+        </div>
+        <h2 className="text-primary text-4xl md:text-6xl mb-4 text-center capitalize !leading-snug">
+          {inWorkPage ? 'another' : 'the'} highlight
+        </h2>
+        <p className="text-xs md:text-base text-primary text-center mb-9 max-w-[826px]">
+          We help our enterprise clients drive business value through the use of
+          cutting-edge technology. Explore our work to see how technology can
+          help transform your business
+        </p>
       </div>
-      <h2 className="text-primary text-4xl md:text-6xl mb-4 text-center capitalize !leading-snug">
-        {inWorkPage ? 'another' : 'the'} highlight
-      </h2>
-      <p className="text-xs md:text-base text-primary text-center mb-9 max-w-[826px]">
-        We help our enterprise clients drive business value through the use of
-        cutting-edge technology. Explore our work to see how technology can help
-        transform your business
-      </p>
 
       <Swiper
         slidesPerView={1}

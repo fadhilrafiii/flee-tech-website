@@ -7,8 +7,10 @@ import LogoIcon from 'components/icons/logo';
 import WhatsappOutlineIcon from 'components/icons/whatsapp-outline';
 
 import { Colors } from 'shared/constants/colors';
+import { TECHNOLOGY_LINKS } from 'shared/constants/technologies';
+import { TechnologyLink } from 'shared/types/technology';
 
-import { ABOUT_US_LINKS, FooterLink, TECHNOLOGY_LINKS_1 } from './constants';
+import { ABOUT_US_LINKS, FooterLink } from './constants';
 
 import styles from './footer.module.scss';
 
@@ -17,7 +19,7 @@ const Footer = () => {
     <footer className="px-6 sm:px-10 pt-6 md:pt-16 pb-3 md:pb-7 flex flex-col overflow-hidden">
       <div className="flex flex-wrap pb-6 md:pb-12">
         <div className="basis-2/3 flex-grow flex flex-col justify-between">
-          <div className={'flex gap-3 items-center z-10 ' + styles.logo}>
+          <div className={'flex gap-3 items-center z-10 mb-6 ' + styles.logo}>
             <LogoIcon size={36} color={Colors.Primary} />
             <span
               role="button"
@@ -37,7 +39,7 @@ const Footer = () => {
             <span className="text-black pr-4 mb-3 capitalize font-bold text-[13px] md:text-xl">
               Technologies
             </span>
-            {TECHNOLOGY_LINKS_1.map((link: FooterLink) => (
+            {TECHNOLOGY_LINKS.map((link: TechnologyLink) => (
               <Link
                 href={link.href}
                 key={link.name}

@@ -6,7 +6,7 @@ const ContactUsSection = () => {
   return (
     <section
       id="contact-us"
-      className="px-7 sm:px-14 md:px-20 py-10 md:py-20 flex flex-col justify-center items-center min-h-[64vh]"
+      className="px-11 sm:px-14 md:px-20 py-16 md:py-24 lg:py-36 flex flex-col justify-center items-center min-h-[60vh]"
     >
       <div className="flex flex-col justify-center items-center max-w-[812px]">
         <h2 className="text-center text-black capitalize text-2xl sm:text-3xl md:text-5xl !leading-snug">

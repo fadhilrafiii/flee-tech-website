@@ -10,6 +10,7 @@ import { WORKS } from 'shared/constants/works';
 import { Work, WorkDetail } from 'shared/types/work';
 import { getURLParamsString } from 'shared/utils/string';
 import WorkDetailSection from 'components/sections/work/details';
+import Link from 'next/link';
 
 interface WorkDetailProps {
   work: Work;
@@ -38,6 +39,18 @@ const WorkDetail = ({ work }: WorkDetailProps) => {
           {work.details && work.details.map((detail: WorkDetail, idx: number) => (
             <WorkDetailSection key={idx} content={detail} />
           ))}
+          <div className='flex flex-wrap justify-evenly px-5 py-6 sm:p-36 gap-y-8'>
+            <div className='basis-1/2 flex-grow sm:min-w-[384px] text-left sm:text-center'>
+              <div className='text-grey mb-2 text-[18px]'>Client</div>
+              <div className='text-darker-grey font-medium text-[18px]'>{work.client}</div>
+            </div>
+            <div className='basis-1/2 flex-grow sm:min-w-[384px] text-left sm:text-center'>
+              <div className='text-grey mb-2 text-[18px]'>URL</div>
+              {work.url ? (
+                <Link href={work.url} className='text-primary font-medium hover:underline text-[18px]'>{work.url}</Link>
+              ) : <div className='text-primary font-medium text-[18px]'>{work.url}</div>}
+            </div>
+          </div>
           <OurWorks inWorkPage works={anotherWorks} />
         </div>
       </div>

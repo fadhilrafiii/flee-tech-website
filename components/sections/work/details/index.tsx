@@ -1,12 +1,15 @@
+import HighlightWorkDetailSection from './highlight.section';
 import LTRWorkDetailSection from './ltr.section';
 import RTLWorkDetailSection from './rtl.section';
 import { WorkDetailSectionProps } from './utils';
 
 const WorkDetailSection = ({ content }: WorkDetailSectionProps) => {
   switch (content.align) {
-    case 'right':
+    case 'highlight':
+      return <HighlightWorkDetailSection content={content} />;
+    case 'rtl':
       return <RTLWorkDetailSection content={content} />;
-    case 'left':
+    case 'ltr':
     default:
       return <LTRWorkDetailSection content={content} />;
   }
