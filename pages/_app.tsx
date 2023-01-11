@@ -1,10 +1,12 @@
 import type { AppProps } from 'next/app';
 
 import { Inter, Lora } from '@next/font/google';
+import NextNProgress from 'nextjs-progressbar';
 
 import Footer from 'components/footer';
 import Navbar from 'components/navbar';
 
+import { Colors } from 'shared/constants/colors';
 import { ScrollContextProvider } from 'shared/context/scroll.context';
 import { WindowDimensionContextProvider } from 'shared/context/window-dimension.context';
 import useScroll from 'shared/hooks/use-scroll';
@@ -35,6 +37,13 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <WindowDimensionContextProvider value={windowDimension}>
       <ScrollContextProvider value={scrollState}>
+        <NextNProgress
+          color={Colors.Primary}
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={6}
+          showOnShallow
+        />
         <div className={`${LORA_FONT.variable} ${INTER_FONT.variable}`}>
           <Navbar />
           <main>
