@@ -19,7 +19,6 @@ const Landing = ({ work }: LandingProps) => {
         fill
         quality={100}
         className="absolute inset-0 -z-10 object-cover"
-        priority
         placeholder="blur"
       />
       <div className="w-full px-5 md:px-20 lg:px-40 mt-14">
