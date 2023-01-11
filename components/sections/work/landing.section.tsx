@@ -17,7 +17,6 @@ const Landing = ({ work }: LandingProps) => {
         src={work.banner}
         alt={work.title}
         fill
-        quality={100}
         className="absolute inset-0 -z-10 object-cover"
         placeholder="blur"
       />
