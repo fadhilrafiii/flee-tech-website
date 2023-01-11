@@ -60,7 +60,7 @@ const WorkDetail = ({ work }: WorkDetailProps) => {
 
 export const getStaticPaths = () => {
   const works = WORKS.map((work: Work) => ({
-    params: { title: work.title },
+    params: { title: getURLParamsString(work.title) },
   }));
   return {
     paths: works,
