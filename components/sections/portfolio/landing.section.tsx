@@ -12,9 +12,8 @@ const Landing = () => {
         src={FeatureWorkBanner}
         alt="Porfolio | Flee Tech"
         fill
-        quality={100}
         className="absolute inset-0 -z-10 object-cover"
-        priority
+        placeholder="blur"
       />
       <h1
         className={

@@ -12,9 +12,8 @@ const Landing = () => {
         src={ContactBannerImg}
         alt="About Us | Flee Tech"
         fill
-        quality={100}
         className="absolute inset-0 -z-10 object-cover object-top"
-        priority
+        placeholder="blur"
       />
       <h1
         className={
