@@ -16,22 +16,23 @@ interface LandingMenu {
 
 const LANDING_MENUS: LandingMenu[] = [
   {
-    title: 'Lorem ipsum dolor sit amet consectetur',
-    linkText: 'Lorem ipsum dolor',
+    title:
+      'Expanding into new markets through the use of innovative solutions.',
+    linkText: 'Product Development',
     href: '/',
-    body: 'Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus',
+    body: 'Utilizing our expertise in application development to create new products',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur',
-    linkText: 'Lorem ipsum dolor',
+    title: 'Generating demand quickly by establishing a strong brand identity',
+    linkText: 'Digital Strategy',
     href: '/',
-    body: 'Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus',
+    body: 'Using our expertise in web design and development to implement digital brand strategy',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur',
-    linkText: 'Lorem ipsum dolor',
+    title: 'Improving lead generation by creating more effective sales funnels',
+    linkText: 'Software Development',
     href: '/',
-    body: 'Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus',
+    body: 'Improving the agility of your business through the use of scalable enterprise applicationss',
   },
 ];
 
@@ -81,30 +82,29 @@ const Landing = () => {
           }
         >
           <h3 className="text-white text-3xl mb-14 font-secondary">
-            Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus ut
-            morbi egestas.
+            Which business outcomes are you seeking to achieve?
           </h3>
-          <LinkButton href="/">Lorem ipsum dolor</LinkButton>
+          <LinkButton className="capitalize" href="/portfolio">
+            Explore our services
+          </LinkButton>
         </div>
         <div className="flex-grow flex flex-col basis-[60%] w-full divide-y divide-white-50">
           <div className="flex blur-12-white-10 divide-x divide-white-50">
             {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
               <div key={idx} className="flex flex-col min-w-[220px] basis-1/3">
                 <div className="flex-grow p-5 text-white text-2xl">
-                  Lorem ipsum dolor sit amet consectetur
+                  {menu.title}
                 </div>
               </div>
             ))}
           </div>
           <div className="flex blur-5-white-10 divide-x divide-white-50 basis-1/3">
             {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
-              <div key={idx} className="p-5 text-white text-2xl">
-                <LinkButton href="/" className="mb-4">
-                  Lorem ipsum dolor
+              <div key={idx} className="basis-1/3 p-5 text-white text-2xl">
+                <LinkButton href="/contact" className="mb-4">
+                  {menu.linkText}
                 </LinkButton>
-                <div>
-                  Lorem ipsum dolor sit amet consectetur. Vitae ultrices cursus{' '}
-                </div>
+                <div>{menu.body}</div>
               </div>
             ))}
           </div>

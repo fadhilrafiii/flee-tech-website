@@ -46,7 +46,9 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
     <section id="our-value" className="divide-y divide-grey">
       <div className="flex flex-col justify-center items-center py-10 sm:py-32 px-8">
         <div className="text-sm sm:text-base tracking-[3px] md:tracking-[6.5px] text-dark-grey uppercase text-center mb-6">
-          Greeting, we are flee tech
+          {forAboutPage
+            ? 'Good product comes from good people'
+            : 'Greeting, we are flee tech'}
         </div>
         {forAboutPage ? (
           <h2
@@ -70,7 +72,7 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
         {VALUES.map(({ Icon, ...value }: OurValue, idx: number) => (
           <div
             key={idx}
-            className="py-10 px-6 sm:p-12 md:p-8 lg:p-16 basis-1/3"
+            className="py-10 px-6 sm:p-12 md:p-8 lg:p-12 xl:p-16 basis-1/3"
           >
             <div className={'mb-10 sm:mb-16 ' + styles.valueIcon}>
               <Icon size={80} color={Colors.Primary} />
@@ -78,7 +80,7 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
             <div className="tracking-[4px] lg:tracking-[6px] text-grey text-sm sm:text-lg lg:text-xl uppercase mb-4">
               {value.label}
             </div>
-            <h3 className="font-medium text-3xl sm:text-[40px] text-primary capitalize mb-6 !leading-snug">
+            <h3 className="font-medium text-3xl lg:text-4xl text-primary capitalize mb-6 !leading-snug">
               {value.title}
             </h3>
             <p className="text-sm sm:text-base text-black">{value.body}</p>
