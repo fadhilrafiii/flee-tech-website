@@ -47,9 +47,12 @@ const Navbar = () => {
   const { pathname } = useRouter();
   const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);
 
-  const isWhiteNavbar = ['work', 'technology', 'insight'].includes(
-    pathname.split('/')[1],
-  );
+  const isWhiteNavbar = [
+    'work',
+    'technology',
+    'insight',
+    'development',
+  ].includes(pathname.split('/')[1]);
 
   const onToggleMenu = (state: boolean) => {
     if (menuRef && menuRef.current) {

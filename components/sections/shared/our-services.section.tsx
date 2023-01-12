@@ -1,13 +1,11 @@
 import Image, { StaticImageData } from 'next/image';
-import React, { FC } from 'react';
+import React from 'react';
 
-import DevicesOutlineIcon from 'components/icons/devices-outline';
-import PencilRulerOutlineIcon from 'components/icons/pencil-ruler-outline';
-import { IconProps } from 'components/icons/utils';
-import WebCodeOutlineIcon from 'components/icons/web-code-outline';
 import LinkButton from 'components/link-button';
 
 import { Colors } from 'shared/constants/colors';
+import { DEVELOPMENT_CARDS } from 'shared/constants/developments';
+import { Development } from 'shared/types/development';
 
 import styles from './shared-section.module.scss';
 
@@ -76,34 +74,6 @@ const PROJECT_IMAGES_SECOND_ROW: ProjectImage[] = [
   {
     src: UUImg,
     alt: 'Undang Undang Project 2',
-  },
-];
-
-interface OurService {
-  Icon: FC<IconProps>;
-  title: string;
-  body: string;
-  href: string;
-}
-
-const SERVICES: OurService[] = [
-  {
-    Icon: PencilRulerOutlineIcon,
-    title: 'UI/UX design',
-    body: 'An approach to web and product design that focuses on creating designs that encourage users to take a desired action',
-    href: '/',
-  },
-  {
-    Icon: WebCodeOutlineIcon,
-    title: 'Web Development',
-    body: 'Creating custom websites that are designed to generate leads and increase sales.',
-    href: '/',
-  },
-  {
-    Icon: DevicesOutlineIcon,
-    title: 'App Development',
-    body: 'Enhancing the flexibility and speed of your business operations through the use of scalable enterprise applications',
-    href: '/',
   },
 ];
 
@@ -208,30 +178,34 @@ const OurServices = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white-50 bg-primary">
-          {SERVICES.map(({ Icon, ...service }: OurService, idx: number) => (
-            <div
-              key={idx}
-              className="p-10 md:p-12 lg:p-16 md:px-8 lg:px-12 basis-1/3 flex flex-col items-center justify-between"
-            >
-              <div className={'mb-6 sm:mb-11 ' + styles.serviceIcon}>
-                <Icon size={64} color={Colors.White} />
-              </div>
-              <div>
-                <h3 className="font-medium text-2xl sm:text-3xl lg:text-[40px] !leading-snug text-white text-center capitalize mb-6">
-                  {service.title}
-                </h3>
-                <p className="text-sm sm:text-base text-white text-center">
-                  {service.body}
-                </p>
-              </div>
-              <LinkButton
-                href={service.href}
-                className="!justify-center pt-9 !mb-0"
+          {DEVELOPMENT_CARDS.map(
+            ({ Icon, ...dev }: Development, idx: number) => (
+              <div
+                key={idx}
+                className="p-10 md:p-12 lg:p-16 md:px-8 lg:px-12 basis-1/3 flex flex-col items-center justify-between"
               >
-                {''}
-              </LinkButton>
-            </div>
-          ))}
+                {Icon && (
+                  <div className={'mb-6 sm:mb-11 ' + styles.serviceIcon}>
+                    <Icon size={64} color={Colors.White} />
+                  </div>
+                )}
+                <div>
+                  <h3 className="font-medium text-2xl sm:text-3xl lg:text-[40px] !leading-snug text-white text-center capitalize mb-6">
+                    {dev.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-white text-center">
+                    {dev.desc}
+                  </p>
+                </div>
+                <LinkButton
+                  href={dev.href}
+                  className="!justify-center pt-9 !mb-0"
+                >
+                  {''}
+                </LinkButton>
+              </div>
+            ),
+          )}
         </div>
       </div>
     </section>

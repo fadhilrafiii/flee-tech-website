@@ -16,7 +16,7 @@ const ContactUsSection = () => {
           Explore the faster way to get software done
         </h2>
         <Link
-          href="/"
+          href="/contact"
           className={
             'rounded-[24.5px] font-bold capitalize bg-gradient-to-t from-black to-dark-grey text-white text-xs sm:text-2xl py-[6px] sm:py-[10px] px-6 sm:px-11 ring-1 ring-black ' +
             styles.buttonShadow

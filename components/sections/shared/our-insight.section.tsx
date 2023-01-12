@@ -37,7 +37,7 @@ const OurInsights = ({
   const slidesPerView = useMemo(() => {
     if (clientWidth >= 1024)
       return ((clientWidth > 1440 ? 1440 : clientWidth) - 380) / 439;
-    else if (clientWidth >= 480) return (clientWidth - 80) / 372;
+    else if (clientWidth >= 820) return 2;
     else return 1;
   }, [clientWidth]);
 

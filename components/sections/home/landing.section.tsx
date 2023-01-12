@@ -32,7 +32,7 @@ const LANDING_MENUS: LandingMenu[] = [
     title: 'Improving lead generation by creating more effective sales funnels',
     linkText: 'Software Development',
     href: '/',
-    body: 'Improving the agility of your business through the use of scalable enterprise applicationss',
+    body: 'Improving the agility of your business through the use of scalable enterprise applications',
   },
 ];
 

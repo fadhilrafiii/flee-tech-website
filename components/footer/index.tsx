@@ -88,16 +88,28 @@ const Footer = () => {
           &#169; 2022 Flee Tech
         </span>
         <div className="flex gap-5 md:gap-16">
-          <Link href="/" className={styles.socialMediaIcon}>
+          <Link
+            href="https://api.whatsapp.com/send/?phone=6282177968605&type=phone_number&app_absent=0"
+            target="_blank"
+            className={styles.socialMediaIcon}
+          >
             <WhatsappOutlineIcon color="#333333" />
           </Link>
-          <Link href="/" className={styles.socialMediaIcon}>
+          <Link
+            href="https://instagram.com/flee.tech?igshid=Yzg5MTU1MDY="
+            target="_blank"
+            className={styles.socialMediaIcon}
+          >
             <InstagramOutlineIcon color="#333333" />
           </Link>
           {/* <Link href="/" className={styles.socialMediaIcon}>
             <FacebookOutlineIcon color="#333333" />
           </Link> */}
-          <Link href="/" className={styles.socialMediaIcon}>
+          <Link
+            href="https://www.linkedin.com/company/flee-tech"
+            target="_blank"
+            className={styles.socialMediaIcon}
+          >
             <LinkedinOutlineIcon color="#333333" />
           </Link>
         </div>

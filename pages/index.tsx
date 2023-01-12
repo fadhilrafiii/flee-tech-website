@@ -12,9 +12,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Flee Tech</title>
-        <meta name="description" content="Flee Tech | Create your own app" />
+        <title>Flee Tech Industry</title>
+        <meta
+          name="description"
+          content="Work together with us, Flee Tech. Improve your business with a world class technology. As a IT Consultant, we'll help you to win your business competition"
+        />
         <link rel="preload" href="/images/video-callback.webp" as="image" />
+        <meta property="og:title" content="Flee Tech Industry" />
+        <meta
+          property="og:description"
+          content="Work together with us, Flee Tech. Improve your business with a world class technology. As a IT Consultant, we'll help you to win your business competition"
+        />
       </Head>
       <div className="relative">
         <Landing />

@@ -56,3 +56,11 @@ img {
 .swiper-slide {
   height: auto !important;
 }
+
+.kp-dev-icon svg {
+  height: 48px !important;
+
+  @media (min-width: 768px) {
+    height: 81px !important;
+  }
+}
