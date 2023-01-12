@@ -44,7 +44,7 @@ const OurInsights = ({
   return (
     <section
       id="our-insight"
-      className="pl-8 lg:pl-20 py-10 sm:py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12 gap-y-8 md:gap-y-12"
+      className="px-8 lg:pl-20 py-10 sm:py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12 gap-y-8 md:gap-y-12"
     >
       <div className="lg:max-w-[300px]">
         <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-2 sm:mb-6 !leading-snug">
