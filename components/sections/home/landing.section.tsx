@@ -92,7 +92,7 @@ const Landing = () => {
           <div className="flex blur-12-white-10 divide-x divide-white-50">
             {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
               <div key={idx} className="flex flex-col min-w-[220px] basis-1/3">
-                <div className="flex-grow p-5 text-white text-2xl">
+                <div className="flex-grow p-5 text-white text-[18px] font-medium">
                   {menu.title}
                 </div>
               </div>
@@ -101,10 +101,15 @@ const Landing = () => {
           <div className="flex blur-5-white-10 divide-x divide-white-50 basis-1/3">
             {LANDING_MENUS.map((menu: LandingMenu, idx: number) => (
               <div key={idx} className="basis-1/3 p-5 text-white text-2xl">
-                <LinkButton href="/contact" className="mb-4">
+                <LinkButton
+                  href="/contact"
+                  className="mb-3 text-2xl !items-start"
+                >
                   {menu.linkText}
                 </LinkButton>
-                <div>{menu.body}</div>
+                <div className="text-[18px] font-medium !leading-normal">
+                  {menu.body}
+                </div>
               </div>
             ))}
           </div>
