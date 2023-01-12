@@ -23,6 +23,8 @@ module.exports = {
       'dark-grey': '#4A4A4A',
       'darker-grey': '#333333',
       grey: '#999494',
+      red: '#ff9494',
+      green: '#4bb453',
     },
     fontFamily: {
       primary: ['var(--primary-font)', ...fontFamily.serif],

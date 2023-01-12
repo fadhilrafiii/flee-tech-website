@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useContext, useMemo } from 'react';
 
 import { Autoplay, Pagination } from 'swiper';
@@ -11,7 +10,6 @@ import WorkCard from 'components/work-card';
 import { WORKS as _WORKS } from 'shared/constants/works';
 import WindowDimensionContext from 'shared/context/window-dimension.context';
 import { Work } from 'shared/types/work';
-import { getURLParamsString } from 'shared/utils/string';
 
 const WORKS = _WORKS.filter(
   (work: Work) => work.title !== 'Adelia Frozen Food',
@@ -23,7 +21,6 @@ interface OurWorksProps {
 }
 
 const OurWorks = ({ inWorkPage, works = WORKS }: OurWorksProps) => {
-  const router = useRouter();
   const { height: isWindowReady } = useContext(WindowDimensionContext);
 
   const workSwiperBreakpoints = useMemo(
@@ -78,12 +75,7 @@ const OurWorks = ({ inWorkPage, works = WORKS }: OurWorksProps) => {
       >
         {works.map((work: Work, idx: number) => (
           <SwiperSlide key={idx}>
-            <WorkCard
-              work={work}
-              onClick={() =>
-                router.push(`/work/${getURLParamsString(work.title)}`)
-              }
-            />
+            <WorkCard work={work} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -2,9 +2,9 @@ import Head from 'next/head';
 
 import Landing from 'components/sections/home/landing.section';
 import OurClient from 'components/sections/home/our-client.section';
-import OurInsights from 'components/sections/home/our-insight.section';
 import OurWorks from 'components/sections/home/our-work.section';
 import ContactUsSection from 'components/sections/shared/contact-us.section';
+import OurInsights from 'components/sections/shared/our-insight.section';
 import OurServices from 'components/sections/shared/our-services.section';
 import OurValues from 'components/sections/shared/our-value.section';
 

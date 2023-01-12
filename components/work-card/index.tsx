@@ -1,29 +1,29 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Work } from 'shared/types/work';
+import { getURLParamsString } from 'shared/utils/string';
 
 import styles from './work-card.module.scss';
 
 interface WorkCardProps {
   work: Work;
-  onClick: () => void;
 }
 
-const WorkCard = ({ work, onClick }: WorkCardProps) => {
+const WorkCard = ({ work }: WorkCardProps) => {
   return (
-    <div
+    <Link
+      href={`/work/${getURLParamsString(work.title)}`}
       className={
-        'overflow-hidden rounded-[10px] bg-white w-full max-w-[575px] min-w-[280px] mx-auto h-full ' +
+        'block verflow-hidden rounded-[10px] bg-white w-full max-w-[575px] min-w-[280px] mx-auto h-full ' +
         styles.cardBoxShadow
       }
-      role="button"
-      onClick={onClick}
     >
       <div className="aspect-[4/3] max-h-[398px] w-full bg-white shadow-inner relative">
         <Image
           src={work.image}
           alt={work.title}
-          sizes="(max-width: 767px) 33vw, 80vw"
+          sizes="(max-width: 767px) 90vw, 50vw"
           fill
           placeholder="blur"
         />
@@ -36,7 +36,7 @@ const WorkCard = ({ work, onClick }: WorkCardProps) => {
           {work.subtitle}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { useContext, useMemo } from 'react';
 
 import { Autoplay, FreeMode, Pagination } from 'swiper';
@@ -9,39 +9,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import LinkButton from 'components/link-button';
 
 import { Colors } from 'shared/constants/colors';
+import { INSIGHTS_CAROUSEL_LIST } from 'shared/constants/insights';
 import WindowDimensionContext from 'shared/context/window-dimension.context';
+import { Insight } from 'shared/types/insight';
 
-import DummyInsightImg from 'public/images/dummy-insight.jpg';
-
-interface OurInsight {
-  date: string;
-  title: string;
-  href: string;
-  image: StaticImageData;
+interface OurInsightProps {
+  insights?: Insight[];
 }
 
-const INSIGHTS: OurInsight[] = [
-  {
-    date: '12/12/2022',
-    title: 'lorem ipsum dolor sit amet',
-    href: '/',
-    image: DummyInsightImg,
-  },
-  {
-    date: '12/12/2022',
-    title: 'lorem ipsum dolor sit amet',
-    href: '/',
-    image: DummyInsightImg,
-  },
-  {
-    date: '12/12/2022',
-    title: 'lorem ipsum dolor sit amet',
-    href: '/',
-    image: DummyInsightImg,
-  },
-];
-
-const OurInsights = () => {
+const OurInsights = ({
+  insights = INSIGHTS_CAROUSEL_LIST,
+}: OurInsightProps) => {
   const { width: clientWidth } = useContext(WindowDimensionContext);
 
   const swiperModules = useMemo(() => {
@@ -66,7 +44,7 @@ const OurInsights = () => {
   return (
     <section
       id="our-insight"
-      className="px-8 lg:px-20 py-10 sm:py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12 gap-y-8 md:gap-y-12"
+      className="pl-8 lg:pl-20 py-10 sm:py-[72px] overflow-hidden flex flex-wrap lg:flex-nowrap items-center justify-center gap-12 gap-y-8 md:gap-y-12"
     >
       <div className="lg:max-w-[300px]">
         <h3 className="text-center lg:text-left capitalize text-4xl md:text-6xl text-primary mb-2 sm:mb-6 !leading-snug">
@@ -90,9 +68,9 @@ const OurInsights = () => {
         pagination={paginationConfig}
         modules={swiperModules}
       >
-        {INSIGHTS.map((ins: OurInsight, idx: number) => (
+        {insights.map((ins: Insight, idx: number) => (
           <SwiperSlide key={idx}>
-            <div className="overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[240px] xs:min-w-[258px] sm:min-w-[320px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
+            <div className="flex flex-col h-full overflow-hidden rounded-[11px] ring-1 ring-black relative mx-auto min-w-[240px] xs:min-w-[258px] sm:min-w-[320px] lg:min-w-[383px] max-w-[320px] sm:max-w-[340px] lg:max-w-[383px]">
               <div className="aspect-[47/33] w-full relative select-none">
                 <Image
                   style={{
@@ -103,15 +81,17 @@ const OurInsights = () => {
                   fill
                 />
               </div>
-              <div className="flex flex-col item-start p-6 select-none">
-                <span className="leading-loose text-grey text-xs">
-                  {ins.date}
-                </span>
-                <h3 className="text-2xl xs:text-3xl lg:text-[40px] text-black capitalize !leading-snug mb-4">
-                  {ins.title}
-                </h3>
+              <div className="flex-grow flex flex-col justify-between p-6 select-none">
+                <div>
+                  <span className="leading-loose text-grey text-xs">
+                    {ins.date}
+                  </span>
+                  <h3 className="text-2xl md:text-[28px] lg:text-[34px] text-black capitalize !leading-snug mb-4">
+                    {ins.title}
+                  </h3>
+                </div>
                 <LinkButton
-                  href={ins.href}
+                  href={`/insight/${ins.title}`}
                   className="w-full !m-0 !max-w-none"
                   iconColor={Colors.Black}
                 >

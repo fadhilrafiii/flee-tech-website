@@ -1,14 +1,9 @@
-import { useRouter } from 'next/router';
-
 import WorkCard from 'components/work-card';
 
 import { WORKS } from 'shared/constants/works';
 import { Work } from 'shared/types/work';
-import { getURLParamsString } from 'shared/utils/string';
 
 const WorkSection = () => {
-  const router = useRouter();
-
   return (
     <section
       id="work"
@@ -19,12 +14,7 @@ const WorkSection = () => {
           key={work.title}
           className="basis-[calc(50%-24px)] xl:basis-[calc(50%-40px)] flex-shrink max-w-[575px]"
         >
-          <WorkCard
-            work={work}
-            onClick={() =>
-              router.push(`/work/${getURLParamsString(work.title)}`)
-            }
-          />
+          <WorkCard work={work} />
         </div>
       ))}
     </section>
