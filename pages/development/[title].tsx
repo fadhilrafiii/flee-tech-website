@@ -156,7 +156,7 @@ export const getStaticPaths = () => {
 
 export const getStaticProps = (ctx: GetStaticPropsContext) => {
   const development = DEVELOPMENTS.find(
-    (dev: Development) => dev.href === '/development/' + ctx?.params?.title,
+    (dev: Development) => dev.href === ctx?.params?.title,
   );
 
   return {

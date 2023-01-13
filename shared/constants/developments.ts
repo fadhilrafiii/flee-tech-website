@@ -33,7 +33,7 @@ export const DEVELOPMENTS: Development[] = [
   {
     title: 'UI / UX Design',
     desc: 'An approach to web and product design that focuses on creating designs that encourage users to take a desired action',
-    href: '/development/uiux',
+    href: 'uiux',
     banner: UIUXImg,
     headerText:
       "Are you looking to improve the user experience of your company's products or services? we offer top-notch UX design services to help your business succeed.",
@@ -57,7 +57,7 @@ export const DEVELOPMENTS: Development[] = [
   {
     title: 'web development',
     desc: 'Creating custom websites that are designed to generate leads and increase sales.',
-    href: '/development/web',
+    href: 'web',
     banner: WebImg,
     headerText:
       'The World always growing in digital era, Would you rather stay still? We can help you bring the digital world, starts from the website. Our web development services include:',
@@ -79,7 +79,7 @@ export const DEVELOPMENTS: Development[] = [
   {
     title: 'app development',
     desc: 'Enhancing the flexibility and speed of your business operations through the use of scalable enterprise applications.',
-    href: '/development/mobile',
+    href: 'mobile',
     banner: MobileImg,
     headerText:
       'With our app development services, you can bring your idea to life on mobile devices. We offer:',
