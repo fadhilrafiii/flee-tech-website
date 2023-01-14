@@ -1,18 +1,33 @@
+import Image from 'next/image';
+
+import AdeliaLogoImg from 'public/images/adelia-logo-bw.png';
+import PonpesAlhadiLogoImg from 'public/images/ponpes-alhadi-logo-bw.png';
+
 const OurClient = () => {
   return (
     <section
       id="our-client"
-      className="flex items-center gap-y-10 md:gap-y-12 gap-x-16 lg:gap-x-20 py-8 sm:py-12 px-8 sm:px-14 flex-wrap"
+      className="flex items-center gap-y-8 md:gap-y-10 gap-x-16 lg:gap-x-20 py-8 sm:py-11 px-8 sm:px-14 flex-wrap"
     >
-      <h3 className="text-2xl md:text-4xl font-bold font-secondary min-w-fit">
+      <h3 className="text-2xl md:text-4xl font-medium font-secondary min-w-fit">
         They Used Our Service
       </h3>
       <div className="relative flex-grow">
-        <div className="flex justify-center gap-12 lg:gap-16 flex-wrap md:flex-nowrap">
-          <h3 className="text-3xl text-center basis-1/4">Lorem</h3>
-          <h3 className="text-3xl text-center basis-1/4">Ipsum</h3>
-          <h3 className="text-3xl text-center basis-1/4">Lorem</h3>
-          <h3 className="text-3xl text-center basis-1/4">Ipsum</h3>
+        <div className="flex justify-startflex-wrap md:flex-nowrap">
+          <div className="text-3xl text-center basis-1/4 px-12 flex-grow-0 flex items-center justify-center">
+            <Image
+              src={PonpesAlhadiLogoImg}
+              alt="Pondok Pesantren Al Hadi"
+              className="w-full"
+            />
+          </div>
+          <div className="text-3xl text-center basis-1/4 px-12 flex-grow-0 flex items-center justify-center">
+            <Image
+              src={AdeliaLogoImg}
+              alt="Adelia Frozen Food"
+              className="w-full"
+            />
+          </div>
         </div>
       </div>
     </section>

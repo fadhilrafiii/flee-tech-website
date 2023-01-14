@@ -75,7 +75,7 @@ const Footer = () => {
               Portfolio
             </Link>
             <Link
-              href="/contact-us"
+              href="/contact"
               className="text-black pr-4 mb-3 capitalize font-bold text-[13px] md:text-xl"
             >
               Contact us

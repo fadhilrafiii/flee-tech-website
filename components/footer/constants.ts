@@ -6,14 +6,14 @@ export interface FooterLink {
 export const ABOUT_US_LINKS: FooterLink[] = [
   {
     name: 'UI/UX Design',
-    href: '/',
+    href: '/development/uiux',
   },
   {
     name: 'Web Development',
-    href: '/',
+    href: '/development/web',
   },
   {
     name: 'App Development',
-    href: '/',
+    href: '/development/app',
   },
 ];

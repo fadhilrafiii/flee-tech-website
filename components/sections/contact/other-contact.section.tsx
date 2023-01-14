@@ -16,7 +16,8 @@ const OtherContact = () => {
           our office location
         </h3>
         <p className="text-base md:text-xl text-grey pb-1">
-          Bandar Lampung, Indonesia, 35131
+          Sentot Alibasya No.158/170, Waydadi, Sukarame, Bandar Lampung,
+          Indonesia, 35131
         </p>
       </div>
     </div>
