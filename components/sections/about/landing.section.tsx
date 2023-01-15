@@ -22,8 +22,8 @@ const Landing = () => {
       >
         we are flee tech
       </h1>
-      <p className="capitalize text-white text-center text-[18px] sm:text-[30px] max-w-[824px] mx-auto !leading-normal">
-        we design and build custom solution for your business
+      <p className="text-white text-center text-[18px] sm:text-[30px] max-w-[824px] mx-auto !leading-normal">
+        We design and build custom solution for your business
       </p>
     </section>
   );

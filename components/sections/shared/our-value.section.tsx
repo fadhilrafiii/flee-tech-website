@@ -53,14 +53,14 @@ const OurValues = ({ forAboutPage = false }: OurValuesProps) => {
         {forAboutPage ? (
           <h2
             style={{ lineHeight: 1.33 }}
-            className="capitalize font-medium text-3xl xs:text-4xl md:text-6xl text-primary text-center max-w-[642px]"
+            className="font-medium text-3xl xs:text-4xl md:text-6xl text-primary text-center max-w-[642px]"
           >
-            We more then just building software
+            We more than just building software
           </h2>
         ) : (
           <h2
             style={{ lineHeight: 1.33 }}
-            className="capitalize font-medium text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1082px] text-center"
+            className="font-medium text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-primary max-w-[1082px] text-center"
           >
             We prioritize delivering results over the software itself, and
             approach development with a focus on quality, design, and meeting

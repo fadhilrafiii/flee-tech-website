@@ -22,7 +22,7 @@ const Landing = () => {
       >
         Featured Work
       </h1>
-      <p className="capitalize text-white text-center text-[18px] sm:text-[30px] max-w-[824px] mx-auto !leading-normal">
+      <p className="text-white text-center text-[18px] sm:text-[30px] max-w-[824px] mx-auto !leading-normal">
         We’d like to feature all our project, but here are some that really show
         off what we do
       </p>

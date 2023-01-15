@@ -40,15 +40,15 @@ export const DEVELOPMENTS: Development[] = [
     keyPoints: [
       {
         Icon: 'HandsOutlineIcon',
-        text: "understand your users' needs, goals, and behaviors",
+        text: "Understand your users' needs, goals, and behaviors",
       },
       {
         Icon: 'ShapesOutlineIcon',
-        text: 'enhancing experience with intuitive and user-friendly designs',
+        text: 'Enhancing experience with intuitive and user-friendly designs',
       },
       {
         Icon: 'OneHandOutlineIcon',
-        text: 'user-centered and data-driven design',
+        text: 'User-centered and data-driven design',
       },
     ],
     footerText:
@@ -94,7 +94,7 @@ export const DEVELOPMENTS: Development[] = [
       },
       {
         Icon: 'StorefrontOutlineIcon',
-        text: 'app Testing and deployment on the App Store and Google Play',
+        text: 'App testing and deployment on the App Store and Google Play',
       },
     ],
     footerText:

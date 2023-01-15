@@ -16,8 +16,7 @@ interface LandingMenu {
 
 const LANDING_MENUS: LandingMenu[] = [
   {
-    title:
-      'Expanding into new markets through the use of innovative solutions.',
+    title: 'Expanding into new markets through the use of innovative solutions',
     linkText: 'Product Development',
     href: '/',
     body: 'Utilizing our expertise in application development to create new products',

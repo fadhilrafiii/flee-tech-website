@@ -100,7 +100,7 @@ const DevelopmentDetail = ({ development }: DevelopmentDetailProps) => {
             <h1 className="capitalize !leading-snug text-3xl md:text-5xl lg:text-6xl text-white mb-6">
               {development.title}
             </h1>
-            <h3 className="!leading-snug text-white-75 text-[18px] md:text-2xl lg:text-3xl font-secondary capitalize">
+            <h3 className="!leading-snug text-white-75 text-[18px] md:text-2xl lg:text-3xl font-secondary">
               {development.desc}
             </h3>
           </div>
@@ -123,7 +123,7 @@ const DevelopmentDetail = ({ development }: DevelopmentDetailProps) => {
                     <div className={'mb-6 md:mb-10 kp-dev-icon'}>
                       <DevelopmentKPIcon name={kp.Icon} />
                     </div>
-                    <p className="text-xl md:text-2xl lg:text-3xl text-darker-grey capitalize font-medium">
+                    <p className="text-xl md:text-2xl lg:text-3xl text-darker-grey font-medium">
                       {kp.text}
                     </p>
                   </div>

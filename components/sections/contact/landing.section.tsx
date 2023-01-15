@@ -22,7 +22,7 @@ const Landing = () => {
       >
         we’d love to work with you
       </h1>
-      <p className="capitalize text-white text-left sm:text-center text-[18px] sm:text-[30px] max-w-[824px] mr-auto sm:mx-auto !leading-normal">
+      <p className="text-white text-left sm:text-center text-[18px] sm:text-[30px] max-w-[824px] mr-auto sm:mx-auto !leading-normal">
         We’ve worked with clients of all sizes, from startups to enterprise
         brands. Let’s talk about your project and how we can help provide value
       </p>
