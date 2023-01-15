@@ -79,7 +79,7 @@ export const DEVELOPMENTS: Development[] = [
   {
     title: 'app development',
     desc: 'Enhancing the flexibility and speed of your business operations through the use of scalable enterprise applications.',
-    href: 'mobile',
+    href: 'app',
     banner: MobileImg,
     headerText:
       'With our app development services, you can bring your idea to life on mobile devices. We offer:',
